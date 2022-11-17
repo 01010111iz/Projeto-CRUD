@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css">
+  
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <form class="form">
+                <h2 id="title">Login</h2>
+                <input type="email" onchange="onChangeEmail()" class="input-login" placeholder="E-mail" id="email">
+                <span class="login-border"></span>
+                
+                <div class="form-field">
+                    <div class="error" id="email-required-error">E-mail é obrigatório</div>
+                    <div class="error" id="email-invalid-error" >E-mail é inválido</div>
+                </div>
+                
+                <input class="pass" type="password" onchange="onChangePassword()" placeholder="Senha" id="password">
+                <span class="senha-border"></span>
+                <div class="form-field">
+                    <div class="error" id="password-required-error">Senha é obrigatória</div>
+                </div>
+                
+                <button class="button" id="login-button" disabled="true" type="submit" onclick="logar(); return false">Login</button>
+                <a class="redefinir" href="#" id="recover-password-button">Esqueci a senha</a>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="login.js"></script>
+<script src="validations.js"></script>
+</html>

@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
+}
+
+.main{
+    height: 100vh;
+    background: linear-gradient(212deg, #cfb064, #006025, #cfb064);
+}
+
+.header{
+    min-height: 100px;
+    width: 400px;
+    background-color: unset;
+    padding: 32px;
+    padding-left: 40%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro{
+    margin-bottom: 32px;
+    color: #181818;
+}
+
+.content{
+    margin-left: 41%;
+    min-height: 400px;
+    width: 300px;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    padding: 32px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input{
+    margin-bottom: 3px;
+    height: 30px;
+    width: 100%;
+    border: unset;
+    box-sizing: border-box;
+    padding-left: 8px;
+    outline: unset;
+    border-radius: 4px;
+}
+
+.border{
+    height: 1px;
+    width: 100%;
+    margin-bottom: 8px;
+    background-color: #cfcfcf;
+}
+
+.border-address{
+    height: 1px;
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: #cfcfcf;
+}
+
+button:active{
+    opacity: 0.7;
+}
+
+button{
+    height: 28px;
+    width: 100%;
+}
+.button{
+    outline: none;
+    background-color: #006025;
+    background-size: 200%;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 6px;
+    border: unset;
+    cursor: pointer;
+}
+
+.button-res{
+    outline: none;
+    background-color: #cfcfcf;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 6px;
+    border: unset;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
