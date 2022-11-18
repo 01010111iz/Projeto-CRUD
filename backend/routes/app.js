@@ -1,14 +1,22 @@
-var express = require('express');
+const express = require('express');
 //Declaração de variáveis que chamará a função express, junto aos recursos da pasta node_modules
-var app = express();
+const bodyParser = require('body-parser');
+const fs = require('fs');
+const app = express();
 //Declaração da variável que receberá a função
 
-app.get("/", (req, res) => {
-//get receberá a requisição do express
-    res.status(200).send("Teste");
-//Trará como resposta a string declarada
-});
-/*FINALIZA METODO GET*/
+/*Criação do app expresso*/
+
+/*MIDDLEWARE*/
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended : true}));
+/*FIM DO MIDDLEWARE
+Analisador de JSON
+*/
+
+const routes = require('./route.js');
+app.use('/', routes);
+/*Importação/exigência do arquivo em que é realizado todas as operações de roteamento*/
 app.post("/", (req, res) => {
   //get receberá a requisição do express
   const dados = [];
@@ -22,12 +30,11 @@ app.post("/", (req, res) => {
     };
     //hash com os dados necessários
     dados.push (resultBody);
-    var fs = require("fs");
-    fs.writeFile("C:\Users\helviley.melo\OneDrive - Tora Soluções Logísticas Integradas\Documentos\Projetos\backend")
+    
 });
-
 app.listen(3000, () => {
-//lerá o que foi atribuído à variável 
+    //lerá o que foi atribuído à variável 
     console.log("Servidor rodando")
-//mensagem que será exibida no terminal
+    //mensagem que será exibida no terminal
+    /*Inicialização do server*/
 });
