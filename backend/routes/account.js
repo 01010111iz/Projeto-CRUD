@@ -12,10 +12,7 @@ const saveAccountData = async (data) => {
     if(err)
     return console.log(err);
     });
-    
 }
-
-
 
  const getAccountData = () =>{
     const jsonData = fs.readFileSync(dataPath);
