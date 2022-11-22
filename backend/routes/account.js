@@ -29,10 +29,15 @@ accountRoutes.post('/account/addaccount', (req, res) =>{
     res.send({sucess: true, msg:"Conta adicionada com sucesso!"})
  });
 
- accountRoutes.get, ('/account/list', (req, res) => {
-
-    const accounts = getAccountData();
-    res.send(accounts);
+ 
+ accountRoutes.get('/account/list', async (req, res) => {
+     try {
+         const accounts = await getAccountData();
+         console.log("============Entrou no GET============", accounts)
+         return res.status(200).json(accounts);
+     } catch (error) {
+        console.log("errorTryCatch", error);
+     }
  });
 
 accountRoutes.put('/account/:id', (req, res) => {
@@ -51,7 +56,7 @@ accountRoutes.put('/account/:id', (req, res) => {
          const userId = req.params['id'];
          delete existAccounts[userId];
          saveAccountData(existAccounts);
-         res.send('Conta com ID' + [accountId] + ' foi deletada')
+         res.send('Conta com ID' + [userId] + ' foi deletada')
      }, true);
  });
 module.exports = accountRoutes;

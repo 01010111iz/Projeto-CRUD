@@ -1,5 +1,8 @@
-const URL = "http://localhost3000/account/addaccount";
-const register = express.accoutRoutes();
+const router = ("../../../backend/routes/route");
+const URL = "http://localhost:3000/account/list";
+const exp = ("express")
+// const register = router;
+// const API = ("../API/api");
 async function save(){
     let name = document.getElementById("name").value;
     let rg = document.getElementById("RG").value;
@@ -7,20 +10,29 @@ async function save(){
     let address = document.getElementById("address").value;
     let blob = new Blob([name, rg, cpf, address], {type: "text/plain;charset=utf-8"});
     /*saveAs*/ (blob, "Formulário de cadastro " + ".txt");
-    
-    let response = await fetch(URL)
-    .then(response => {
+    await fetch(URL
+    //     {
+    //     method: "GET",
+    //     headers: {
+    //         "Content-Type":"application/json"
+    //     },
+    //     // body:{
+    //     //     name: name,
+    //     //     cpf: cpf,
+    //     //     rg: rg,
+    //     //     address: address
+    //     // }
+    // }
+    )
+    .then((response) => {
+        console.log("DEU BOM", response);
         if(response.status == 200){
             alert("Usuário registrado com sucesso!");
-            form.reset();
-        } else {
-            alert("Erro ao registrar usuário");
+            //FormData.reset();
         }
-    }).catch(function (res) {
-        alert("Erro ao registrar usuário");
-        console.log(res);
-    });
-    let data = await response.blob();
-    console.log(data);
-
+    })
+    .catch((error) => {
+        console.log("FALHOU", error);
+        alert("Erro ao registrar usuário!");
+    })
 }

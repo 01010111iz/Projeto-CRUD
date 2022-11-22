@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require("cors");
 //Declaração de variáveis que chamará a função express, junto aos recursos da pasta node_modules
 const bodyParser = require('body-parser');
 const fs = require('fs');
@@ -9,6 +10,7 @@ const app = express();
 /*Criação do app expresso*/
 
 /*MIDDLEWARE*/
+app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}));
 /*FIM DO MIDDLEWARE
