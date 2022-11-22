@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const app = express();
+
 //Declaração da variável que receberá a função
 
 /*Criação do app expresso*/
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded({extended : true}));
 Analisador de JSON
 */
 
+
 const routes = require('./route.js');
 app.use('/', routes);
 /*Importação/exigência do arquivo em que é realizado todas as operações de roteamento*/
@@ -22,6 +24,8 @@ app.post("/", (req, res) => {
   const dados = [];
   //array dos dados inseridos no form
   const{name, cpf, rg, address} = req.body;
+
+
   const resultBody = {
       name:name,
       rg:rg,

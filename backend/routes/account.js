@@ -17,21 +17,22 @@ const saveAccountData = async (data) => {
  const getAccountData = () =>{
     const jsonData = fs.readFileSync(dataPath);
    return JSON.parse(jsonData);
- }
+}
 
- accountRoutes.post('/account/addaccount', (req, res) =>{
+accountRoutes.post('/account/addaccount', (req, res) =>{
     //const {name, rg, cpf}
-      let existAccounts = getAccountData();
-      const newAccountId = Math.floor(100000 + Math.random() * 900000);
-      existAccounts[newAccountId] = req.body;
-      console.log(existAccounts);
-      saveAccountData(existAccounts);
-     res.send({sucess: true, msg:"Conta adicionada com sucesso!"})
+    let existAccounts = getAccountData();
+    const newAccountId = Math.floor(100000 + Math.random() * 900000);
+    existAccounts[newAccountId] = req.body;
+    console.log(existAccounts);
+    saveAccountData(existAccounts);
+    res.send({sucess: true, msg:"Conta adicionada com sucesso!"})
  });
 
- accountRoutes.get('/account/list', (req, res) => {
-     const accounts = getAccountData();
-     res.send(accounts);
+ accountRoutes.get, ('/account/list', (req, res) => {
+
+    const accounts = getAccountData();
+    res.send(accounts);
  });
 
 accountRoutes.put('/account/:id', (req, res) => {
