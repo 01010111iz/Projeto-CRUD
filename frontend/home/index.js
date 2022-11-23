@@ -10,18 +10,15 @@ const exp = ("express")
     let blob = new Blob([name, rg, cpf, address], {type: "text/plain;charset=utf-8"});
    (blob, "Formulário de cadastro " + ".txt");
     fetch(URL,
-         {
+        {
          method: "POST",
          body: JSON.stringify({name, rg, cpf, address}),
          headers: {
-             "Content-Type":"application/json"
-         }
-         
-    })
+            "Content-Type":"application/json"
+            }
+        })
     .then(response => response.json())
-    .then(json => console.log(json),
-        alert("Dados inseridos!")
-    )
+    .then(alert("Dados inseridos!"))
     .catch((error) => {
         console.log(error);
         alert("Erro ao registrar usuário!");

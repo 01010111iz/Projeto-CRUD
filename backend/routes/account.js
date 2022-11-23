@@ -23,7 +23,6 @@ accountRoutes.post('/account/addaccount', (req, res) =>{
     let existAccounts = getAccountData();
     const newAccountId = Math.floor(100000 + Math.random() * 900000);
     existAccounts[newAccountId] = req.body;
-    console.log(existAccounts);
     saveAccountData(existAccounts);
     res.send({sucess: true, msg:"Conta adicionada com sucesso!"})
  });
@@ -32,7 +31,6 @@ accountRoutes.post('/account/addaccount', (req, res) =>{
  accountRoutes.get('/account/list', async (req, res) => {
      try {
          const accounts = await getAccountData();
-         console.log("============Entrou no GET============", accounts)
          return res.status(200).json(accounts);
      } catch (error) {
         console.log("errorTryCatch", error);
