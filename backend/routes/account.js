@@ -20,7 +20,6 @@ const saveAccountData = async (data) => {
 }
 
 accountRoutes.post('/account/addaccount', (req, res) =>{
-    //const {name, rg, cpf}
     let existAccounts = getAccountData();
     const newAccountId = Math.floor(100000 + Math.random() * 900000);
     existAccounts[newAccountId] = req.body;
