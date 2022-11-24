@@ -7,8 +7,8 @@ function userData() {
     method: "GET",
     //body: JSON.parse({ name, rg, cpf, address }),
     headers: {
-       "Content-Type": "application/json",
-     },
+      "Content-Type": "application/json",
+    },
   })
     .then((response) => response.json())
     .catch((error) => {
@@ -49,8 +49,8 @@ function tableList() {
 
 // module.exports(accountRoutes);
 const form = {
-    name: () => document.getElementById("name"),
-    rg: () => document.getElementById("rg"),
-    cpf: () => document.getElementById("cpf"),
-    address: () => document.getElementById("address"),
-}
+  name: () => document.getElementById("name"),
+  rg: () => document.getElementById("rg"),
+  cpf: () => document.getElementById("cpf"),
+  address: () => document.getElementById("address"),
+};
