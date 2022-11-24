@@ -1,59 +1,70 @@
 const express = require("express");
 const accountRoutes = express.Router();
 const fs = require("fs");
-const dataPath = "./details/account.json"
+const dataPath = "./details/account.json";
 
 const saveAccountData = async (data) => {
-    const stringifyData = JSON.stringify(data);
-    fs.writeFileSync(dataPath, stringifyData);
-    fs.writeFileSync("C:/Users/helviley.melo/OneDrive - Tora Soluções Logísticas Integradas/Documentos/Projetos/backend/Formulário-de-cadastro.txt",
-    JSON.stringify(data)+"\r\n",{'flag':'a'}, 
-    function(err){
-    if(err)
-    return console.log(err);
-    });
-}
+  const stringifyData = JSON.stringify(data);
+  fs.writeFileSync(dataPath, stringifyData);
+  fs.writeFileSync(
+    "C:/Users/helviley.melo/OneDrive - Tora Soluções Logísticas Integradas/Documentos/Projetos/backend/Formulário-de-cadastro.txt",
+    JSON.stringify(data) + "\r\n",
+    { flag: "a" },
+    function (err) {
+      if (err) return console.log(err);
+    }
+  );
+};
 
- const getAccountData = () =>{
-    const jsonData = fs.readFileSync(dataPath);
-   return JSON.parse(jsonData);
-}
+const getAccountData = () => {
+  const jsonData = fs.readFileSync(dataPath);
+  return JSON.parse(jsonData);
+};
 
-accountRoutes.post('/account/addaccount', (req, res) =>{
-    let existAccounts = getAccountData();
-    const newAccountId = Math.floor(100000 + Math.random() * 900000);
-    existAccounts[newAccountId] = req.body;
-    saveAccountData(existAccounts);
-    res.send({sucess: true, msg:"Conta adicionada com sucesso!"})
- });
+accountRoutes.post("/account/addaccount", (req, res) => {
+  let existAccounts = getAccountData();
+  const newAccountId = Math.floor(100000 + Math.random() * 900000);
+  existAccounts[newAccountId] = req.body;
+  saveAccountData(existAccounts);
+  res.send({ sucess: true, msg: "Conta adicionada com sucesso!" });
+});
 
- 
- accountRoutes.get('/account/list', async (req, res) => {
-     try {
-         const accounts = await getAccountData();
-         return res.status(200).json(accounts);
-     } catch (error) {
-        console.log("errorTryCatch", error);
-     }
- });
+accountRoutes.get("/account/list", async (req, res) => {
+  try {
+    const accounts = await getAccountData();
+    return res.status(200).json(accounts);
+  } catch (error) {
+    console.log("errorTryCatch", error);
+  }
+});
 
-accountRoutes.put('/account/:id', (req, res) => {
-     var existAccounts = getAccountData();
-     fs.readFile(dataPath, 'utf-8', (err, data) => {
-         const accountId = req.params['id'];
-         existAccounts[accountId] = req.body;
-         saveAccountData(existAccounts);
-         res.send('A conta com o ID' + [accountId] + ' foi atualizada.')
-     }, true);
- });
+accountRoutes.put("/account/put/:id", (req, res) => {
+  var existAccounts = getAccountData();
+  fs.readFile(
+    dataPath,
+    "utf-8",
+    (err, data) => {
+      const accountId = req.params["id"];
+      existAccounts[accountId] = req.body;
+      saveAccountData(existAccounts);
+      res.send("A conta com o ID" + [accountId] + " foi atualizada.");
+    },
+    true
+  );
+});
 
- accountRoutes.delete('/account/delete/:id', (req, res) =>{
-     fs.readFile(dataPath, 'utf-8', (err, data) =>{
-         var existAccounts = getAccountData();
-         const userId = req.params['id'];
-         delete existAccounts[userId];
-         saveAccountData(existAccounts);
-         res.send('Conta com ID' + [userId] + ' foi deletada')
-     }, true);
- });
+accountRoutes.delete("/account/delete/:id", (req, res) => {
+  fs.readFile(
+    dataPath,
+    "utf-8",
+    (err, data) => {
+      var existAccounts = getAccountData();
+      const userId = req.params["id"];
+      delete existAccounts[userId];
+      saveAccountData(existAccounts);
+      res.send("Conta com ID" + [userId] + " foi deletada");
+    },
+    true
+  );
+});
 module.exports = accountRoutes;
