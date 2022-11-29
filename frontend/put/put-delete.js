@@ -1,68 +1,81 @@
-// document.location.reload(true);
 const exps = "express";
 const url = "http://localhost:3000/account/list";
-let result;
 
 function userData() {
   fetch(url, {
     method: "GET",
-    //body: JSON.parse({ name, rg, cpf, address }),
     headers: {
       "Content-Type": "application/json",
     },
   })
-  .then((response) => response.json())
-  .then((json) => {
+    .then((response) => response.json())
+    .then((json) => {
       let data = document.querySelector("table > tbody");
       let ul;
       let li;
-      let imgEdit = "<img src='edit.svg'>"
-      // <img src="./edit.svg">
+      let editButton;
+      let deleteButton;
       for (const id in json) {
         ul = document.createElement("ul");
-        for(const info in json[id]){
+        for (const info in json[id]) {
           li = document.createElement("li");
-          li.innerHTML = `${info}: ${json[id][info]}`;
-          
+          editButton = document.createElement("button");
+          var lbl = document.createTextNode("Editar");
+          editButton.appendChild(lbl);
+          deleteButton = document.createElement("button");
+          var lb = document.createTextNode("Deletar");
+          deleteButton.appendChild(lb);
+          li.innerHTML = `${id} - ${info}: ${json[id][info]}`;
           ul.appendChild(li);
         }
-        
-         data.appendChild(ul);
-    }})
-
+        // if(a){
+        //   editButton.onclick = editData();
+        // }
+        // else if (a){
+        //   deleteButton.onclick = deleteData();
+        // }
+        // else{
+        // }
+        data.appendChild(ul);
+        data.appendChild(editButton);
+        data.appendChild(deleteButton);
+      }
+    })
     .catch((error) => {
       console.log(error);
     });
 }
 
-// module.exports(accountRoutes)
-// function tableList() {
-//   const tbody = document.getElementById("tbody");
-//   tbody.innerText = " ";
-//   for (let i = 0; i < this.Data.length; i++) {
-//     let tr = tbody.insertRow();
+// ====================================== //
 
-//     let td_id = tr.insertCell();
-//     let td_name = tr.insertCell();
-//     let td_RG = tr.insertCell();
-//     let td_cpf = tr.insertCell();
-//     let td_address = tr.insertCell();
-//     let td_actions = tr.insertCell();
+const URLedit = "http://localhost:3000/account/put";
+function editData() {
+  // const Window = window.open("put-delete.html", "popup")
+  fetch(URLedit, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then(console.log("teste editar"))
+    .then()
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
-//     td_id.innerText = this.Data[i].id;
-//     td_name.innerText = this.Data[i].name;
-//     td_RG.innerText = this.Data[i].RG;
-//     td_cpf.innerText = this.Data[i].cpf;
-//     td_address.innerText = this.Data[i].address;
+const URLdelete = "http://localhost:3000/account/delete";
 
-//     td_id.classList.add("center");
-
-//     let imgEdit = document.createElement("img");
-//     imgEdit.src = "./edit.svg";
-//     let imgDelete = document.createElement("img");
-//     imgDelete.src = "./delete.svg";
-
-//     td_actions.appendChild(imgEdit);
-//     td_actions.appendChild(imgDelete);
-//   }
-// }
+function deleteData() {
+  fetch(URLdelete, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then(console.log("teste deletar"))
+    .then()
+    .catch((error) => {
+      console.log(error);
+    });
+}
