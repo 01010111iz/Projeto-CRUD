@@ -47,8 +47,6 @@ button {
   margin-top: 10px;
   outline: none;
   background: linear-gradient(-6deg, rgba(207, 177, 100, 0.582), #006025ec);
-  /* background-size: 200%; */
-
   color: white;
   font-size: 16px;
   font-weight: bold;
