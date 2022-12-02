@@ -9,10 +9,12 @@
     <script src="./put-delete.js"></script>
   </head>
   <body onload="userData()">
+
     <div id="table">
       <table id="head">
         <h1>Lista de Cadastro</h1>
       </table>
+    
       <table id="data-head">
         <tbody id="tbody">
           <tr id="dataUser"></tr>
@@ -20,4 +22,29 @@
       </table>
     </div>
   </body>
+
+   <body>
+    <div id="myModal" class="modal">
+      <form class="form" action="home.html">
+        <h2 id="title">Editar cadastro de usuário</h2>
+  
+        <input type="name" class="input-name" placeholder="Nome" id="name"/>
+        <span class="border"></span>
+  
+        <input type="number" class="input-RG" placeholder="RG" id="RG"/>
+        <span class="border"></span>
+  
+        <input type="number" class="input-CPF" placeholder="CPF" id="CPF"/>
+        <span class="border"></span>
+  
+        <input type="text" class="input-endereço" placeholder="Endereço" id="address"/>
+        <span class="border"></span>
+  
+        <div class="modal-footer">
+          <button class="button-submit" onclick="editData()">Atualizar</button>
+          <button class="button-cancell" id="cancell" type="reset" onclick="closeModal()">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </body> 
 </html>
