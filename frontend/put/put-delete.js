@@ -17,21 +17,15 @@ function userData() {
       ul_html = ``;
       for (const id in json) {
         for (const info in json[id]){
-          ul_html += `
-              <li>${info}: ${json[id][info]}</li>
-          `;
+          ul_html += `<li>${info}: ${json[id][info]}</li>`;
         }
-        ul_html += `
-          <img
-          src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" 
-          class="editButton_${id}" 
-          onclick=Modal("${id}")></img>
-          
-          <img 
-          src="https://cdn-icons-png.flaticon.com/512/3138/3138336.png" 
-          class="deleteButton_${id}" 
-          onclick=Confirm("${id}")></img>
-      `;
+        ul_html += `<img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" 
+        class="editButton_${id}" 
+        onclick=Modal("${id}")></img>
+        
+        <img src="https://cdn-icons-png.flaticon.com/512/3138/3138336.png" 
+        class="deleteButton_${id}" 
+        onclick=Confirm("${id}")></img>`;
       }data.innerHTML = ul_html;
     })
     .catch((error) => {
