@@ -32,6 +32,17 @@ accountRoutes.post("/account/addaccount", (req, res) => {
 accountRoutes.get("/account/list",  (req, res) => {
   try {
     const accounts =  getAccountData();
+    let employess = [{accounts}];
+      employess.sort(function(a,b){
+        return a.name.localeCompare(b.name);
+      });
+      // let names = {};
+      // for(let i in employess){
+      //   let l = employess[i].name[0].toUpperCase();
+      //   names[l] = names[l] || [];
+      //   names[l].push(employess[i]);
+      // }
+      console.log(employess);
     return res.status(200).json(accounts);
   } catch (error) {
     console.log("errorTryCatch", error);
