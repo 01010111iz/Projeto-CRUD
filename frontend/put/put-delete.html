@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atualização de cadastro</title>
     <link rel="stylesheet" href="put-delete.css" />
+    <link rel="stylesheet" href="modal.css">
     <script src="./put-delete.js"></script>
   </head>
   <body onload="userData()">
@@ -14,7 +15,7 @@
       <table id="head">
         <h1>Lista de Cadastro</h1>
       </table>
-    
+   
       <table id="data-head">
         <tbody id="tbody">
           <tr id="dataUser"></tr>
@@ -25,24 +26,24 @@
 
    <body>
     <div id="myModal" class="modal">
-      <form class="form" action="home.html">
-        <h2 id="title">Editar cadastro de usuário</h2>
+      <form class="form" action="put-delete.html">
+        <h2 id="titleModal">Editar cadastro de usuário</h2>
   
-        <input type="name" class="input-name" placeholder="Nome" id="name"/>
+        <input type="name" class="input-name" placeholder="Nome" id="nameModal"/>
         <span class="border"></span>
   
-        <input type="number" class="input-RG" placeholder="RG" id="RG"/>
+        <input type="number" class="input-RG" placeholder="RG" id="RGModal"/>
         <span class="border"></span>
   
-        <input type="number" class="input-CPF" placeholder="CPF" id="CPF"/>
+        <input type="number" class="input-CPF" placeholder="CPF" id="CPFModal"/>
         <span class="border"></span>
   
-        <input type="text" class="input-endereço" placeholder="Endereço" id="address"/>
+        <input type="text" class="input-endereço" placeholder="Endereço" id="addressModal"/>
         <span class="border"></span>
   
         <div class="modal-footer">
-          <button class="button-submit" onclick="editData()">Atualizar</button>
-          <button class="button-cancell" id="cancell" type="reset" onclick="closeModal()">Cancelar</button>
+          <button class="button-submit" id="submitModal">Atualizar</button>
+          <button class="button-cancell" id="cancellModal" type="reset" onclick="closeModal()">Cancelar</button>
         </div>
       </form>
     </div>

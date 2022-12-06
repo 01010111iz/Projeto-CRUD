@@ -3,7 +3,7 @@ const accountRoutes = express.Router();
 const fs = require("fs");
 const dataPath = "./details/account.json";
 
-const saveAccountData = async (data) => {
+const saveAccountData = (data) => {
   const stringifyData = JSON.stringify(data);
   fs.writeFileSync(dataPath, stringifyData);
   fs.writeFileSync(
@@ -29,9 +29,9 @@ accountRoutes.post("/account/addaccount", (req, res) => {
   res.send({ sucess: true, msg: "Conta adicionada com sucesso!" });
 });
 
-accountRoutes.get("/account/list", async (req, res) => {
+accountRoutes.get("/account/list",  (req, res) => {
   try {
-    const accounts = await getAccountData();
+    const accounts =  getAccountData();
     return res.status(200).json(accounts);
   } catch (error) {
     console.log("errorTryCatch", error);
@@ -43,7 +43,7 @@ accountRoutes.put("/account/put/:id", (req, res) => {
   fs.readFile(
     dataPath,
     "utf-8",
-    (err, data) => {
+    () => {
       const accountId = req.params["id"];
       existAccounts[accountId] = req.body;
       saveAccountData(existAccounts);
@@ -57,7 +57,7 @@ accountRoutes.delete("/account/delete/:id", (req, res) => {
   fs.readFile(
     dataPath,
     "utf-8",
-    (err, data) => {
+    () => {
       var existAccounts = getAccountData();
       const userId = req.params["id"];
       delete existAccounts[userId];

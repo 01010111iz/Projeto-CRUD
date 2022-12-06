@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.modal{
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .4);
+    font-family: "Montserrat", sans-serif, "Segoe UI", Tahoma, Geneva, Verdana;
+
+}
+.form{
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 23rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+#nameModal, #RGModal, #CPFModal, #addressModal{
+    background-color:#fff;
+    border: none;
+    width: 195px;
+    height: 40px;
+}
+
+.border{
+    height: 1px;
+    width: 195px;
+    margin-bottom: 3px;
+    background-color: #696969;
+}
+
+.button-submit{
+    flex-direction: row;
+    border-radius: 5px;
+    border: none;
+    margin-top: 7px;
+    width: 90px;
+    height: 24px;
+    background: linear-gradient(-180deg, #00ff22, #fff);
+    cursor: pointer;
+    transition: background 1s;
+    font-weight: bold;
+    font-size: medium;
+    /* color: #918b8b */
+}
+
+.button-submit:hover{
+    background: linear-gradient(167deg, #fff, #1ebb33)
+}
+
+.button-submit:active{
+    opacity: .8;
+}
+
+#cancellModal{
+    flex-direction: row;
+    border-radius: 5px;
+    border: none;
+    margin-top: 7px;
+    width: 90px;
+    height: 24px;
+    background: linear-gradient(-180deg, #ff3640, #fff);
+    cursor: pointer;
+    transition: background 1s;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#cancellModal:hover{
+    background: linear-gradient(167deg, #fff, #e2212b);
+}
+
+#cancellModal:active{
+    opacity: .9;
+} 

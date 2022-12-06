@@ -67,11 +67,10 @@ input {
 }
 
 button {
-  height: 48px;
+  height: 38px;
   width: 100%;
   outline: none;
-  background: #006025;
-  background-size: 200%;
+  background: linear-gradient(-180deg, #00ff22, #006025);
   color: #f1f1f1;
   margin-bottom: 32px;
   font-size: 16px;
@@ -79,8 +78,12 @@ button {
   border: unset;
   border-radius: 4px;
   cursor: pointer;
+  transition: 1s;
 }
+button:hover{
+  background: linear-gradient(180deg, #00ff22, #006025);
 
+}
 button:active {
   opacity: 0.8;
 }

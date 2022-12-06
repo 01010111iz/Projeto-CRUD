@@ -11,21 +11,30 @@ body {
   background: linear-gradient(212deg, #cfb064, #006025, #cfb064);
 }
 
+.link{
+  display: flex;
+  justify-content: end;
+  text-align: center;
+  text-decoration:double;
+  margin-right: 50px;
+  font-size: larger;
+}
+
 .header {
   min-height: 60px;
   width: 400px;
   background-color: unset;
-  padding: 2rem;
+  padding: 0rem;
   padding-left: 43rem;
   align-items: center;
   justify-content: center;
 }
 
 .cadastro {
-  margin-top: 40px;
+  margin-top: 20px;
   font-family: "Montserrat";
   font-weight: 900;
-  background: linear-gradient(-6deg, black, #a39e9eba);
+  background: linear-gradient(180deg, black, #434343ba);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -75,37 +84,56 @@ input {
 .border-address {
   height: 1px;
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   background-color: #cfcfcf;
 }
 
-button:active {
-  opacity: 0.7;
-}
 
 button {
   height: 28px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .button {
   outline: none;
-  background-color: #006025;
-  background-size: 200%;
+  background: linear-gradient(-180deg, #00ff22, #006025);
   color: #ffffff;
   font-weight: bold;
   font-size: 13px;
+  margin-bottom: 8px;
   border-radius: 6px;
   border: unset;
   cursor: pointer;
+  transition: 1s;
 }
+
+.button:hover{
+  background: linear-gradient(167deg, #006025,  #00ff22);
+}
+
+.button:active{
+  opacity: .8;
+}
+
 
 .button-res {
   outline: none;
-  background-color: #cfcfcf;
+  background: #cfcfcf;
   font-weight: bold;
   font-size: 13px;
   border-radius: 6px;
   border: unset;
   cursor: pointer;
   margin-bottom: 3px;
+  transition: 1s;
+}
+
+.button-res:hover{
+  background: #a59f9f;
+}
+
+.button-res:active{
+  opacity: .8;
 }

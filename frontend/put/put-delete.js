@@ -16,110 +16,86 @@ function userData() {
 
       ul_html = ``;
       for (const id in json) {
-        for (const info in json[id]) {
+        for (const info in json[id]){
           ul_html += `
               <li>${info}: ${json[id][info]}</li>
           `;
         }
         ul_html += `
-          <button
-          style= "background: linear-gradient(-8deg, #27b53a, #fff)", background: linear-gradient(8deg, #fff, #00ff22) 
+          <img
+          src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" 
           class="editButton_${id}" 
-          onclick=Modal("${id}")>Editar</button>
+          onclick=Modal("${id}")></img>
           
-          <button class="deleteButton_${id}" onclick=Confirm("${id}")>Deletar</button>
+          <img 
+          src="https://cdn-icons-png.flaticon.com/512/3138/3138336.png" 
+          class="deleteButton_${id}" 
+          onclick=Confirm("${id}")></img>
       `;
-      }
-      data.innerHTML = ul_html;
+      }data.innerHTML = ul_html;
     })
     .catch((error) => {
       console.log(error);
     });
 }
 
-function Modal(id){
+function Modal(id) {
   let modal = document.getElementById("myModal");
+  let msg = document.getElementById("submitModal");
   modal.style.display = "block";
-  modal.addEventListener("click", (e) => {
-    if(e.target.className == "button-submit"){
+  msg.addEventListener("click", () => {
+    msg = confirm("Deseja realmente concluir com as alterações?");
+    if (msg == true) {
       editData(id);
-      console.log("TESTANDO ID: " , id);
-      form.reset();
+    } else {
+      closeModal();
     }
-  })
+  });
 }
 
 function editData(id) {
+  let name = document.getElementById("nameModal").value;
+  let rg = document.getElementById("RGModal").value;
+  let cpf = document.getElementById("CPFModal").value;
+  let address = document.getElementById("addressModal").value;
+  console.log("Editando Modal " + URLedit + id);
   fetch(URLedit + id, {
-    // console.log("TESTANDO ID: " + id)
     method: "PUT",
+    body: JSON.stringify({ name, rg, cpf, address }),
     headers: {
       "Content-Type": "application/json",
     },
   })
-   .then((response) => response.json())
-   .catch((error) => {
-     console.log(error);
+    .then((response) => response.json())
+    .catch((error) => {
+      console.log(error);
     });
 }
 
-function closeModal(myModal){
+function closeModal(myModal) {
   let modal = document.getElementById("myModal");
-  modal.classList.add("mostrar")
+  modal.classList.add("mostrar");
   modal.addEventListener("click", (e) => {
-    if(e.target.id == myModal || e.target.className == "button-cancell"){
+    if (e.target.id == myModal || e.target.className == "button-cancell") {
       modal.classList.remove("mostrar");
     }
-  })
+  });
   modal.style.display = "none";
-  Window = Window.close
   document.body.style.overflow = "auto";
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function Confirm(id){
-  var conf;
-  var c = confirm("Ao seguir com a opção os dados serão apagados permanentemente. Você tem certeza que deseja deletar os dados?");
-  if(c == true){
-    conf = deleteData(id);
-  }else{
-    conf = "Operação cancelada!"
+function Confirm(id) {
+  var c = confirm(
+    "Ao seguir com a opção os dados serão apagados permanentemente. Você tem certeza que deseja deletar os dados?"
+  );
+  if (c == true) {
+    deleteData(id);
+  } else {
+    alert("Operação cancelada!");
   }
 }
 
-function deleteData(id){
+function deleteData(id) {
   fetch(URLdelete + id, {
     method: "DELETE",
     headers: {
