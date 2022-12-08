@@ -12,7 +12,6 @@ function userData() {
   })
     .then((response) => response.json())
     .then((json) => {
-      console.log(json);
       let data = document.querySelector("table > tbody");
       
       ul_html = ``;

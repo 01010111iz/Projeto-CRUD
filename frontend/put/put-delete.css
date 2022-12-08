@@ -4,8 +4,10 @@ body {
   padding: 0;
   font-family: "Montserrat", sans-serif, "Segoe UI", Tahoma, Geneva, Verdana;
   font-style: normal;
-  height: 1280px;
+  min-height: 100vh;
+  height: auto;
   background: linear-gradient(212deg, #cfb064, #006025, #cfb064);
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   font-weight: 700;

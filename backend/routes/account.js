@@ -33,15 +33,16 @@ accountRoutes.get("/account/list",  (req, res) => {
   try {
     const accounts =  getAccountData();
     let users = Object.values(accounts);
-    users.sort(function(a,b){
-      console.log(users)
+    for(const id in accounts){
+      console.log()}
+      users.sort(function(a,b){
        if(a.name < b.name){
          return -1;
        }else{
          return true;
        }
      });
-    return res.status(200).json(accounts);
+    return res.status(200).json(users);
   } catch (error) {
     console.log(error);
   }
