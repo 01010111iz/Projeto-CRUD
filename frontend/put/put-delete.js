@@ -17,6 +17,7 @@ function userData() {
       ul_html = ``;
       for (const id in json) {
         for (const info in json[id]){
+          console.log(json[id])
         ul_html += `<ul>${info}: ${json[id][info]}</ul>`;
         }
         ul_html += `<img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" 
@@ -52,8 +53,7 @@ function editData(id) {
   let rg = document.getElementById("RGModal").value;
   let cpf = document.getElementById("CPFModal").value;
   let address = document.getElementById("addressModal").value;
-  console.log("Editando Modal " + URLedit + id);
-  fetch(URLedit + name, {
+  fetch(URLedit + id, {
     method: "PUT",
     body: JSON.stringify({ name, rg, cpf, address }),
     headers: {
