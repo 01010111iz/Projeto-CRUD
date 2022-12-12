@@ -32,13 +32,11 @@ accountRoutes.post("/account/addaccount", (req, res) => {
 accountRoutes.get("/account/list",  (req, res) => {
   try {
     const accounts =  getAccountData();
-    console.log("account", accounts)
     for(let id in accounts){
       let data = accounts[id];
-      data.id = id
+      data.id = id;
     }
     let users = Object.values(accounts);
-    console.log("users", users)
       users.sort(function(a,b){
        if(a.name < b.name){
          return -1;

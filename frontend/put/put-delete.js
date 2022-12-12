@@ -13,28 +13,25 @@ function userData() {
     .then((response) => response.json())
     .then((json) => {
       let data = document.querySelector("table > tbody");
-      
       ul_html = ``;
       for (const id in json) {
         for (const info in json[id]){
-          console.log(json[id])
         ul_html += `<ul>${info}: ${json[id][info]}</ul>`;
         }
         ul_html += `<img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" 
-        class="editButton_${id}" 
-        onclick=Modal("${id}")></img>
-        
+        class="editButton_${json[id]["id"]}" 
+        onclick=Modal("${json[id]["id"]}")></img>
+
         <img src="https://cdn-icons-png.flaticon.com/512/3138/3138336.png" 
-        class="deleteButton_${id}" 
-        onclick=Confirm("${id}")></img>`;
+        class="deleteButton_${json[id]["id"]}" 
+        onclick=Confirm("${json[id]["id"]}")></img>`;
       }data.innerHTML = ul_html;
     })
     .catch((error) => {
-      console.log(error);
-    });
+      console.log(error);});
 }
 
-function Modal(id) {
+function Modal(id){
   let modal = document.getElementById("myModal");
   let msg = document.getElementById("submitModal");
   modal.style.display = "block";
@@ -43,9 +40,7 @@ function Modal(id) {
     if (msg == true) {
       editData(id);
     } else {
-      closeModal();
-    }
-  });
+      closeModal();}});
 }
 
 function editData(id) {
@@ -55,15 +50,12 @@ function editData(id) {
   let address = document.getElementById("addressModal").value;
   fetch(URLedit + id, {
     method: "PUT",
-    body: JSON.stringify({ name, rg, cpf, address }),
+    body: JSON.stringify({name, rg, cpf, address}),
     headers: {
-      "Content-Type": "application/json",
-    },
-  })
+      "Content-Type": "application/json",},})
     .then((response) => response.json())
     .catch((error) => {
-      console.log(error);
-    });
+      console.log(error);});
 }
 
 function closeModal(myModal) {
@@ -71,9 +63,7 @@ function closeModal(myModal) {
   modal.classList.add("mostrar");
   modal.addEventListener("click", (e) => {
     if (e.target.id == myModal || e.target.className == "button-cancell") {
-      modal.classList.remove("mostrar");
-    }
-  });
+      modal.classList.remove("mostrar");}});
   modal.style.display = "none";
   document.body.style.overflow = "auto";
 }
@@ -81,23 +71,18 @@ function closeModal(myModal) {
 function Confirm(id) {
   var c = confirm(
     "Ao seguir com a opção os dados serão apagados permanentemente. Você tem certeza que deseja deletar os dados?"
-  );
-  if (c == true) {
+  );if (c == true) {
     deleteData(id);
   } else {
-    alert("Operação cancelada!");
-  }
+    alert("Operação cancelada!");}
 }
 
 function deleteData(id) {
   fetch(URLdelete + id, {
     method: "DELETE",
     headers: {
-      "Content-Type": "application/json",
-    },
-  })
+      "Content-Type": "application/json",},})
     .then((response) => response.json())
     .catch((error) => {
-      console.log(error);
-    });
+      console.log(error);});
 }
