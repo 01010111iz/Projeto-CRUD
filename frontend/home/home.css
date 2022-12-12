@@ -14,11 +14,18 @@ body {
 
 .link{
   display: flex;
+  width: auto;
+  background: transparent;
+  border-radius: 8px;
+  color: #424242;
+  border-color: #424242;
   justify-content: end;
   text-align: center;
+  align-items: center;
   text-decoration:none;
   margin-right: 50px;
   font-size: larger;
+  font-weight: 700;
 }
 
 .link:hover{

@@ -35,12 +35,18 @@ function Modal(id){
   let modal = document.getElementById("myModal");
   let msg = document.getElementById("submitModal");
   modal.style.display = "block";
+  let datamodal = modalData(id);
   msg.addEventListener("click", () => {
     msg = confirm("Deseja realmente concluir com as alterações?");
     if (msg == true) {
       editData(id);
     } else {
       closeModal();}});
+}
+
+function modalData(id){
+  let data = document.getElementsByClassName("data_" + id)
+  console.log(data);
 }
 
 function editData(id) {
