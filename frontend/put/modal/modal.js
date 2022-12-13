@@ -25,7 +25,6 @@ function dataModal(id) {
     });
   }
   
-  
   function closeModal(myModal) {
     let modal = document.getElementById("myModal");
     modal.classList.add("mostrar");
