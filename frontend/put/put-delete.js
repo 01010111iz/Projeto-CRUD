@@ -10,68 +10,95 @@ function userData() {
       "Content-Type": "application/json",
     },
   })
-    .then((response) => response.json())
-    .then((json) => {
-      let data = document.querySelector("table > tbody");
-      ul_html = ``;
-      for (const id in json) {
-        for (const info in json[id]){
-        ul_html += `<ul>${info}: ${json[id][info]}</ul>`;
-        }
-        ul_html += `<img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" 
-        class="editButton_${json[id]["id"]}" 
-        onclick=Modal("${json[id]["id"]}")></img>
+  .then((response) => response.json())
+  .then((json) => {
+    let data = document.querySelector("table > tbody");
+    ul_html = ``;
+    for (const id in json) {
+      li_html = ``;
+      for (const info in json[id]) {
+        li_html += `<ul>
+                      <label for="${info}_${json[id]["id"]}">${info}: </label>
+                      <span id="${info}_${json[id]["id"]}">${json[id][info]}</span>
+                    </ul>`;
+      }
+      li_html += `<img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" 
+      class="editButton_${json[id]["id"]}" 
+      onclick=Modal("${json[id]["id"]}")></img>
 
-        <img src="https://cdn-icons-png.flaticon.com/512/3138/3138336.png" 
-        class="deleteButton_${json[id]["id"]}" 
-        onclick=Confirm("${json[id]["id"]}")></img>`;
-      }data.innerHTML = ul_html;
-    })
-    .catch((error) => {
-      console.log(error);});
+      <img src="https://cdn-icons-png.flaticon.com/512/3138/3138336.png" 
+      class="deleteButton_${json[id]["id"]}" 
+      onclick=Confirm("${json[id]["id"]}")></img>`;
+
+      ul_html += li_html;
+    } 
+    data.innerHTML = ul_html;
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 }
 
-function Modal(id){
-  let modal = document.getElementById("myModal");
-  let msg = document.getElementById("submitModal");
-  modal.style.display = "block";
-  let datamodal = modalData(id);
-  msg.addEventListener("click", () => {
-    msg = confirm("Deseja realmente concluir com as alterações?");
-    if (msg == true) {
-      editData(id);
-    } else {
-      closeModal();}});
+function dataModal(id){
+let name = document.querySelector("#name_"+id).innerText;
+let rg = document.querySelector("#rg_"+id).innerText;
+let cpf = document.querySelector("#cpf_"+id).innerText;
+let address = document.querySelector("#address_"+id).innerText;
+
+document.getElementById("nameModal").value = name;
+document.getElementById("RGModal").value = rg;
+document.getElementById("CPFModal").value = cpf;
+document.getElementById("addressModal").value = address;
 }
 
-function modalData(id){
-  let data = document.getElementsByClassName("data_" + id)
-  console.log(data);
+function Modal(id) {
+let modal = document.getElementById("myModal");
+let msg = document.getElementById("submitModal");
+modal.style.display = "block";
+dataModal(id);
+msg.addEventListener("click", () => {
+  msg = confirm("Deseja realmente concluir com as alterações?");
+  if (msg == true) {
+    editData(id);
+  } else {
+    closeModal();
+  }
+});
+}
+
+function modalData(id) {
+let data = document.getElementsByClassName("data_" + id)
+console.log(data);
 }
 
 function editData(id) {
-  let name = document.getElementById("nameModal").value;
-  let rg = document.getElementById("RGModal").value;
-  let cpf = document.getElementById("CPFModal").value;
-  let address = document.getElementById("addressModal").value;
-  fetch(URLedit + id, {
-    method: "PUT",
-    body: JSON.stringify({name, rg, cpf, address}),
-    headers: {
-      "Content-Type": "application/json",},})
-    .then((response) => response.json())
-    .catch((error) => {
-      console.log(error);});
+let name = document.getElementById("nameModal").value;
+let rg = document.getElementById("RGModal").value;
+let cpf = document.getElementById("CPFModal").value;
+let address = document.getElementById("addressModal").value;
+fetch(URLedit + id, {
+  method: "PUT",
+  body: JSON.stringify({ name, rg, cpf, address }),
+  headers: {
+    "Content-Type": "application/json",
+  },
+})
+  .then((response) => response.json())
+  .catch((error) => {
+    console.log(error);
+  });
 }
 
 function closeModal(myModal) {
-  let modal = document.getElementById("myModal");
-  modal.classList.add("mostrar");
-  modal.addEventListener("click", (e) => {
-    if (e.target.id == myModal || e.target.className == "button-cancell") {
-      modal.classList.remove("mostrar");}});
-  modal.style.display = "none";
-  document.body.style.overflow = "auto";
+let modal = document.getElementById("myModal");
+modal.classList.add("mostrar");
+modal.addEventListener("click", (e) => {
+  if (e.target.id == myModal || e.target.className == "button-cancell") {
+    modal.classList.remove("mostrar");
+  }
+});
+modal.style.display = "none";
+document.body.style.overflow = "auto";
 }
 
 function Confirm(id) {
