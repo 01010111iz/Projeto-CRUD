@@ -27,6 +27,27 @@ h1 {
   align-items: center;
 }
 
+.link{
+  display: flex;
+  width: auto;
+  background: transparent;
+  border-radius: 8px;
+  color: #424242;
+  border-color: #424242;
+  text-decoration:none;
+  margin-right: 50px;
+  font-size: larger;
+  font-weight: 700;
+}
+
+.link:hover{
+  opacity: .8;
+}
+
+.link:active{
+  opacity: .4;
+}
+
 #data-head {
   font-family: "Montserrat", sans-serif;
   font-size: x-large;

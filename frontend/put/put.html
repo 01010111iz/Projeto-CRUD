@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atualização de cadastro</title>
-    <link rel="stylesheet" href="put-delete.css" />
+    <link rel="stylesheet" href="put.css" />
     <link rel="stylesheet" href="modal.css">
-    <script src="./put-delete.js"></script>
+    <script src="./put.js"></script>
+    <script src="./backButton.js"></script>
+    <script src="../delete/delete.js"></script>
+    <script src="./modal/modal.js"></script>
   </head>
   <body onload="userData()">
-
     <div id="table">
+      <h4><button class="link" onclick="backButton()">Voltar</button></h4>
       <table id="head">
         <h1>Lista de Cadastro</h1>
       </table>
@@ -26,7 +29,7 @@
 
    <body>
     <div id="myModal" class="modal">
-      <form class="form" action="put-delete.html">
+      <form class="form" action="put.html">
         <h2 id="titleModal">Editar cadastro de usuário</h2>
   
         <input type="name" class="input-name" placeholder="Nome" id="nameModal"/>

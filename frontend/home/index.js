@@ -11,6 +11,10 @@ function save() {
     type: "text/plain;charset=utf-8",
   });
   blob, "Formulário de cadastro " + ".txt";
+  if(!name, !rg, !cpf, !address){
+    alert("Dados obrigatórios!")
+    return true;
+  }else{
   fetch(URL, {
     method: "POST",
     body: JSON.stringify({ name, rg, cpf, address }),
@@ -24,4 +28,10 @@ function save() {
       console.log(error);
       alert("Erro ao registrar usuário!");
     });
+  }
+}
+
+function buttonList(){
+  addEventListener("click", 
+  location.href="/frontend/put/put.html")
 }
