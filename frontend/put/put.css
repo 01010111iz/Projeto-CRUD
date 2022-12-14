@@ -18,7 +18,7 @@ h1 {
   font-size:xxx-large;
   font-family: "Montserrat";
   font-weight: bolder;
-  background: linear-gradient(180deg, black, #434343ba);
+  background: linear-gradient(180deg, white, #828181ba);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -32,8 +32,8 @@ h1 {
   width: auto;
   background: transparent;
   border-radius: 8px;
-  color: #424242;
-  border-color: #424242;
+  color: #f4f4f4; 
+  border-color: #9f9f9f;
   text-decoration:none;
   margin-right: 50px;
   font-size: larger;

@@ -5,8 +5,6 @@ const dataPath = "./details/account.json";
 
 const saveAccountData = (data) => {
   const stringifyData = JSON.stringify(data);
-  const date = new Date().toLocaleString();
-  console.log(date);
   fs.writeFileSync(dataPath, stringifyData);
   fs.writeFileSync(
     "C:/Users/helviley.melo/OneDrive - Tora Soluções Logísticas Integradas/Documentos/Projetos/backend/Formulário-de-cadastro.txt",
@@ -26,6 +24,7 @@ const getAccountData = () => {
 accountRoutes.post("/account/addaccount", (req, res) => {
   let existAccounts = getAccountData();
   const newAccountId = Math.floor(100000 + Math.random() * 900000);
+  req.body.createDate = new Date().toLocaleString("pt-BR", {timeZone: "UTC"});
   existAccounts[newAccountId] = req.body;
   saveAccountData(existAccounts);
   res.send({ sucess: true, msg: "Conta adicionada com sucesso!" });
@@ -59,6 +58,7 @@ accountRoutes.put("/account/put/:id", (req, res) => {
     "utf-8",
     () => {
       const accountId = req.params["id"];
+      req.body.updateDate = new Date().toLocaleString("pt-BR", {timeZone: "UTC"});
       existAccounts[accountId] = req.body;
       saveAccountData(existAccounts);
       res.send("A conta com o ID" + [accountId] + " foi atualizada.");
