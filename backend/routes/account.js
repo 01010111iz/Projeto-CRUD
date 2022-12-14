@@ -5,6 +5,8 @@ const dataPath = "./details/account.json";
 
 const saveAccountData = (data) => {
   const stringifyData = JSON.stringify(data);
+  const date = new Date().toLocaleString();
+  console.log(date);
   fs.writeFileSync(dataPath, stringifyData);
   fs.writeFileSync(
     "C:/Users/helviley.melo/OneDrive - Tora Soluções Logísticas Integradas/Documentos/Projetos/backend/Formulário-de-cadastro.txt",

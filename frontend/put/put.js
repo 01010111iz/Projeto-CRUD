@@ -18,6 +18,7 @@ function userData() {
         li_html = ``;
         for (const info in json[id]) {
           li_html += `<ul>
+                      
                       <label for="${info}_${json[id]["id"]}">${info}: </label>
                       <span id="${info}_${json[id]["id"]}">${json[id][info]}</span>
                     </ul>`;
