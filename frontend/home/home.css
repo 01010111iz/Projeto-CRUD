@@ -20,8 +20,8 @@ h4{
   width: auto;
   background: transparent;
   border-radius: 8px;
-  color: #424242;
-  border-color: #424242;
+  color: #f4f4f4; 
+  border-color: #9f9f9f;
   justify-content: end;
   text-align: center;
   align-items: center;
@@ -54,7 +54,7 @@ h4{
   margin-top: 20px;
   font-family: "Montserrat";
   font-weight: 900;
-  background: linear-gradient(180deg, black, #434343ba);
+  background: linear-gradient(180deg, #FFFFFF, #828181ba);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

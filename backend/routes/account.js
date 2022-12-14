@@ -24,7 +24,7 @@ const getAccountData = () => {
 accountRoutes.post("/account/addaccount", (req, res) => {
   let existAccounts = getAccountData();
   const newAccountId = Math.floor(100000 + Math.random() * 900000);
-  req.body.createDate = new Date().toLocaleString("pt-BR", {timeZone: "UTC"});
+  req.body.createDate = new Date().toLocaleString("pt-br");
   existAccounts[newAccountId] = req.body;
   saveAccountData(existAccounts);
   res.send({ sucess: true, msg: "Conta adicionada com sucesso!" });
@@ -58,7 +58,7 @@ accountRoutes.put("/account/put/:id", (req, res) => {
     "utf-8",
     () => {
       const accountId = req.params["id"];
-      req.body.updateDate = new Date().toLocaleString("pt-BR", {timeZone: "UTC"});
+      req.body.updateDate = new Date().toLocaleString("pt-br");
       existAccounts[accountId] = req.body;
       saveAccountData(existAccounts);
       res.send("A conta com o ID" + [accountId] + " foi atualizada.");
