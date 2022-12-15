@@ -49,14 +49,22 @@
             />
             <span class="border"></span>
 
-            <input
-              type="text"
-              class="input-endereço"
-              placeholder="Endereço"
-              id="address"
-              required
-            />
-            <span class="border-address"></span>
+   <div id="div-cep">
+                <input type="number" class="input-cep" placeholder="CEP" id="cep" required="">
+                <span class="border-cep"></span>
+    
+                <input type="text" class="input-street" placeholder="Logradouro" id="street" required="">
+                <span class="border-street"></span>
+    
+                <input type="number" class="input-number" placeholder="Nº" id="number" required="">
+                <span class="border-number"></span>
+    
+                <input type="text" class="input-district" placeholder="Bairro" id="district" required="">
+                <span class="border-district"></span>
+    
+                <input type="text" class="input-city" placeholder="Cidade" id="city" required="">
+                <span class="border-city"></span>
+            </div>
             
             <button class="button" id="send" onclick="save()">Enviar</button>
             <button class="button-res" id="reset" type="reset">
@@ -70,4 +78,5 @@
   <script type="text/javascript" src="./FileSaver.js"></script>
   <script type="text/javascript" src="./index.js"></script>
   <script src="./logoutButton.js"></script>
+  <script src="./zip code/zipCode.js"></script>
 </html>
