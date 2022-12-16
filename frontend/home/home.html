@@ -21,55 +21,35 @@
         <div class="content">
           <form class="form" action="home.html">
             <h2 id="title">Criar cadastro de usuário</h2>
+
             <label for="name"></label>
-            <input
-              type="name"
-              class="input-name"
-              placeholder="Nome"
-              id="name"
-              required
-            />
+            <input type="name" class="input-name" placeholder="Nome" id="name" required/>
             <span class="border"></span>
+
             <label for="RG"></label>
-            <input
-              type="number"
-              class="input-RG"
-              placeholder="RG"
-              id="RG"
-              required
-            />
+            <input  type="number" class="input-RG" placeholder="RG" id="RG" required/>
             <span class="border"></span>
 
-            <input
-              type="number"
-              class="input-CPF"
-              placeholder="CPF"
-              id="CPF"
-              required
-            />
+            <input type="number" class="input-CPF" placeholder="CPF" id="CPF" required/>
             <span class="border"></span>
 
-   <div id="div-cep">
-                <input type="number" class="input-cep" placeholder="CEP" id="cep" required="">
-                <span class="border-cep"></span>
+            <input type="number" class="input-cep" placeholder="CEP" id="cep" required>
+            <span class="border" id="border-cep"></span>
     
-                <input type="text" class="input-street" placeholder="Logradouro" id="street" required="">
-                <span class="border-street"></span>
+            <input type="text" class="input-street" placeholder="Logradouro" id="street" disabled required>
+            <span class="border" id="border-street"></span>
     
-                <input type="number" class="input-number" placeholder="Nº" id="number" required="">
-                <span class="border-number"></span>
+            <input type="number" class="input-number" placeholder="Nº" id="number" required>
+            <span class="border" id="border-number"></span>
     
-                <input type="text" class="input-district" placeholder="Bairro" id="district" required="">
-                <span class="border-district"></span>
+            <input type="text" class="input-district" placeholder="Bairro" id="district" disabled required>
+            <span class="border" id="border-district"></span>
     
-                <input type="text" class="input-city" placeholder="Cidade" id="city" required="">
-                <span class="border-city"></span>
-            </div>
-            
+            <input type="text" class="input-city" placeholder="Cidade" id="city" disabled required>
+            <span class="border" id="border-city"></span>
+                    
             <button class="button" id="send" onclick="save()">Enviar</button>
-            <button class="button-res" id="reset" type="reset">
-              Redefinir
-            </button>
+            <button class="button-res" id="reset" type="reset">Redefinir</button>
           </form>
         </div>
       </div>

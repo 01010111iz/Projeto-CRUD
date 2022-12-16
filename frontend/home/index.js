@@ -6,18 +6,22 @@ function save() {
   let name = document.getElementById("name").value;
   let rg = document.getElementById("RG").value;
   let cpf = document.getElementById("CPF").value;
-  let address = document.getElementById("address").value;
-  let blob = new Blob([name, rg, cpf, address], {
+  let cep = document.getElementById("cep").value;
+  let street = document.getElementById("street").value;
+  let number = document.getElementById("number").value;
+  let district = document.getElementById("district").value;
+  let city = document.getElementById("city").value;
+  let blob = new Blob([name, rg, cpf, cep, street, number, district, city], {
     type: "text/plain;charset=utf-8",
   });
   blob, "Formulário de cadastro " + ".txt";
-  if(!name, !rg, !cpf, !address){
+  if(!name, !rg, !cpf, !cep, !street, !number, !district, !city){
     alert("Dados obrigatórios!")
     return true;
   }else{
   fetch(URL, {
     method: "POST",
-    body: JSON.stringify({ name, rg, cpf, address }),
+    body: JSON.stringify({ name, rg, cpf, cep, street, number, district, city }),
     headers: {
       "Content-Type": "application/json",
     },
