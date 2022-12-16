@@ -27,11 +27,11 @@
     outline: none;
 }
 
-#nameModal, #RGModal, #CPFModal, #addressModal{
+#nameModal, #RGModal, #CPFModal, #cepModal, #streetModal, #numberModal, #districtModal, #cityModal{
     background-color:#fff;
     border: none;
     width: 195px;
-    height: 40px;
+    height: 30px;
 }
 
 .border{
@@ -45,7 +45,7 @@
     flex-direction: row;
     border-radius: 5px;
     border: none;
-    margin-top: 7px;
+    margin-top: 10px;
     width: 90px;
     height: 24px;
     background: linear-gradient(-180deg, #00ff22, #b8d3ba);
