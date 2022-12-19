@@ -6,7 +6,7 @@ body {
   font-style: normal;
   min-height: 100vh;
   height: auto;
-  background: linear-gradient(212deg, #cfb064, #006025, #cfb064);
+  background: linear-gradient(131deg, #7f384a, #0f1015, #235151);
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@ h1 {
   font-size:xxx-large;
   font-family: "Montserrat";
   font-weight: bolder;
-  background: linear-gradient(180deg, #ffffff, #828181ba);
+  background: linear-gradient(180deg, #f9f9f9, #cfcfcf);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -30,7 +30,7 @@ h1 {
 .link{
   display: flex;
   width: auto;
-  background: transparent;
+  background: #d2a13a;
   border-radius: 8px;
   color: #f4f4f4; 
   border-color: #9f9f9f;

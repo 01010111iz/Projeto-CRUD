@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif, "Segoe UI", Tahoma, Geneva, Verdana;
-}
-
-.main {
-  min-height: 100vh;
-  height: auto;
-  background: linear-gradient(212deg, #cfb064, #006025, #cfb064);
-}
-
 h4{
   margin:10}
 
@@ -19,23 +7,33 @@ h4{
   display: flex;
   width: auto;
   background: transparent;
-  border-radius: 8px;
-  color: #f4f4f4; 
-  border-color: #9f9f9f;
   justify-content: end;
   text-align: center;
   align-items: center;
-  text-decoration:none;
   margin-right: 50px;
+}
+
+.button-link{
+  border-radius: 8px;
+  color: #f4f4f4; 
+  border-color: #9f9f9f;
   font-size: larger;
   font-weight: 700;
+  cursor: pointer;
 }
 
-.link:hover{
-  opacity: .8;
+#list{
+  background: #d2a13a;
 }
 
-.link:active{
+#logout{
+  background: #7f384a;
+}
+.button-link:hover{
+  opacity: .7;
+}
+
+.button-link:active{
   opacity: .4;
 }
 
@@ -54,7 +52,7 @@ h4{
   margin-top: 20px;
   font-family: "Montserrat";
   font-weight: 900;
-  background: linear-gradient(180deg, #FFFFFF, #828181ba);
+  background: linear-gradient(180deg, #f9f9f9, #cfcfcf);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -67,7 +65,7 @@ h4{
   margin: auto;
   min-height: 400px;
   width: 360px;
-  background-color: #ffffff;
+  background-color: #f9f9f9;
   box-sizing: border-box;
   padding: 32px;
   border-radius: 8px;
@@ -121,7 +119,7 @@ button {
 }
 .button {
   outline: none;
-  background: linear-gradient(-180deg, #00ff22, #006025);
+  background: linear-gradient(316deg, #d2a13a, #0f1015);
   color: #ffffff;
   font-weight: bold;
   font-size: 13px;
@@ -133,7 +131,7 @@ button {
 }
 
 .button:hover{
-  background: linear-gradient(167deg, #006025,  #00ff22);
+  background: linear-gradient(-4deg, #0f1015,  #d2a13a);
 }
 
 .button:active{

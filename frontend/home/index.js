@@ -1,7 +1,6 @@
 const router = "../../../backend/routes/route";
 const URL = "http://localhost:3000/account/addaccount";
 const exp = "express";
-
 function save() {
   let name = document.getElementById("name").value;
   let rg = document.getElementById("RG").value;
