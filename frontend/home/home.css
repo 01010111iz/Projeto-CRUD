@@ -4,17 +4,19 @@ h4{
   margin:10}
 
 .link{
-  display: flex;
-  width: auto;
   background: transparent;
-  justify-content: end;
   text-align: center;
   align-items: center;
-  margin-right: 50px;
+  display: flex;
+  justify-content: end;
 }
 
 .button-link{
+  display: flex;
+  margin-right: 15px;
+  width: auto;
   border-radius: 8px;
+  border: none;
   color: #f4f4f4; 
   border-color: #9f9f9f;
   font-size: larger;
@@ -23,11 +25,14 @@ h4{
 }
 
 #list{
-  background: #d2a13a;
+  background: #e7e1d5;
+  color: #6d7179;
 }
 
 #logout{
-  background: #7f384a;
+  background: #404348;
+  color: #efecec;
+  margin-right: 30px;
 }
 .button-link:hover{
   opacity: .7;
@@ -49,7 +54,7 @@ h4{
 }
 
 .cadastro {
-  margin-top: 20px;
+  margin-top: 10px;
   font-family: "Montserrat";
   font-weight: 900;
   background: linear-gradient(180deg, #f9f9f9, #cfcfcf);
@@ -65,7 +70,7 @@ h4{
   margin: auto;
   min-height: 400px;
   width: 360px;
-  background-color: #f9f9f9;
+  background-color: #e7e1d5;
   box-sizing: border-box;
   padding: 32px;
   border-radius: 8px;
@@ -81,6 +86,12 @@ form {
   justify-content: center;
 }
 
+h2{
+  color: #6d7179;
+  display: flex;
+  justify-content: center;
+}
+
 input {
   margin-bottom: 3px;
   height: 30px;
@@ -90,10 +101,13 @@ input {
   padding-left: 8px;
   outline: unset;
   border-radius: 4px;
+  background: #e7e1d5;
+  color: #6d7179;
 }
 
 :disabled{
-  background-color: #e7e7e7;
+  background-color: #6d7179;
+  color: #e7e1d5
 }
 
 .border {
@@ -119,7 +133,7 @@ button {
 }
 .button {
   outline: none;
-  background: linear-gradient(316deg, #d2a13a, #0f1015);
+  background: #174950;
   color: #ffffff;
   font-weight: bold;
   font-size: 13px;
@@ -131,7 +145,7 @@ button {
 }
 
 .button:hover{
-  background: linear-gradient(-4deg, #0f1015,  #d2a13a);
+  background: #008080;
 }
 
 .button:active{
@@ -152,7 +166,7 @@ button {
 }
 
 .button-res:hover{
-  background: #a59f9f;
+  background: #f73636;
 }
 
 .button-res:active{

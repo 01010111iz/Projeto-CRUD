@@ -63,7 +63,7 @@ button {
   height: 38px;
   width: 100%;
   outline: none;
-  background: linear-gradient(316deg, #d2a13a, #0f1015);
+  background: #174950;
   color: #f1f1f1;
   margin-bottom: 32px;
   font-size: 16px;
@@ -75,7 +75,7 @@ button {
 }
 
 button:hover{
-  background: linear-gradient(-16deg, #0f1015, #d2a13a);
+  background: #008080;
 }
 
 button:active {

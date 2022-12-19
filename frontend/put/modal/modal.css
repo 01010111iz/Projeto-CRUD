@@ -48,16 +48,16 @@
     margin-top: 10px;
     width: 90px;
     height: 24px;
-    background: linear-gradient(316deg, #d2a13a, #0f1015);
+    background: #174950;
     cursor: pointer;
     transition: background 1s;
     font-weight: bold;
     font-size: medium;
-    /* color: #918b8b */
+    color: #e7e1d5;
 }
 
 .button-submit:hover{
-    background: linear-gradient(-4deg, #0f1015,  #d2a13a);
+    background: #008080;
 }
 
 .button-submit:active{
@@ -71,7 +71,8 @@
     margin-top: 7px;
     width: 90px;
     height: 24px;
-    background: linear-gradient(-180deg, #ff3640, #b99f9f);
+    background: #e93740;
+    color: #e7e1d5;
     cursor: pointer;
     transition: background 1s;
     font-weight: bold;
@@ -79,7 +80,7 @@
 }
 
 #cancellModal:hover{
-    background: linear-gradient(167deg, #b99f9f, #e2212b);
+    background: #ff000d;
 }
 
 #cancellModal:active{

@@ -6,7 +6,7 @@ body {
   font-style: normal;
   min-height: 100vh;
   height: auto;
-  background: linear-gradient(131deg, #7f384a, #0f1015, #235151);
+  background: linear-gradient(192deg, #155226, #185c3e, #16463f);
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@ h1 {
   font-size:xxx-large;
   font-family: "Montserrat";
   font-weight: bolder;
-  background: linear-gradient(180deg, #f9f9f9, #cfcfcf);
+  background: linear-gradient(180deg, #f9f9f9, #e7e1d5);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -30,12 +30,11 @@ h1 {
 .link{
   display: flex;
   width: auto;
-  background: #d2a13a;
-  border-radius: 8px;
-  color: #f4f4f4; 
-  border-color: #9f9f9f;
-  text-decoration:none;
-  margin-right: 50px;
+  background: #e7e1d5;
+  color: #6d7179;
+  border-radius: 10px;
+  border: none; 
+  margin-left: 88%;
   font-size: larger;
   font-weight: 700;
 }
@@ -64,6 +63,12 @@ h1 {
 
 ul{
   font-weight: lighter;
+}
+
+#bar{
+  height: 1px;
+  width: 100%;
+  color: #0f0f0f;
 }
 
 img {
