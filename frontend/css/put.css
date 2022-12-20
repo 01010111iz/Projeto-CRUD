@@ -51,14 +51,12 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-size: x-large;
   text-transform: capitalize;
-  justify-content: center;
-  align-items: flex-start;
   box-sizing: border-box;
   width: 500px;
   height: auto;
   border-radius: 8px;
   color: #1f1f1f;
-  background-color: rgba(255, 255, 255, 0.685);
+  background-color: #e7e1d5c9;;
 }
 
 ul{

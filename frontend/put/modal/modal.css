@@ -14,7 +14,7 @@
 
 }
 .form{
-    background-color: #fff;
+    background-color: #e7e1d5;
     margin: 15% auto;
     padding: 20px;
     border-radius: 5px;
@@ -28,7 +28,7 @@
 }
 
 #nameModal, #RGModal, #CPFModal, #cepModal, #streetModal, #numberModal, #districtModal, #cityModal{
-    background-color:#fff;
+    background-color:#e7e1d5;
     border: none;
     width: 195px;
     height: 30px;

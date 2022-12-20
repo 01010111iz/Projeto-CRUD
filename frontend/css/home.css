@@ -106,8 +106,8 @@ input {
 }
 
 :disabled{
+  color: #e7e1d5;
   background-color: #6d7179;
-  color: #e7e1d5
 }
 
 .border {

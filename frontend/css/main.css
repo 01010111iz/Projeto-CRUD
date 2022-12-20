@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.btns{
+    display: flex;
+    height: 70px;
+    justify-content: end;
+    background: linear-gradient(192deg, #155226, #185c3e, #16463f);
+    align-items: center;
+}
+
+.registerButton, .listButton, .logoutButton {
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    background: #e7e1d5;
+    font-weight: bold;
+    font-size: 10px;
+    height: 20px;
+}
+
+.main{
+    margin: 50px 100px;
+    font-size: 16px;
+    height: 355px;
+}
+
+.ftr{
+    background-color: #e7e1d5;
+    display: flex;
+    height: 100px;
+}
+
+.footer{
+    height: 40px;
+    display: flex;
+}
+
+img{
+    height: 40px;
+}
