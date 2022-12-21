@@ -28,19 +28,19 @@ h1 {
 }
 
 .link{
-  display: flex;
   width: auto;
-  background: #e7e1d5;
-  color: #6d7179;
+  background: #e7e1d5c7;
   border-radius: 10px;
-  border: none; 
+  border: 1px solid #e9d3a7; 
   margin-left: 88%;
-  font-size: larger;
-  font-weight: 700;
+  font-size: 10px;
+  font-weight: bold;
+  height: 20px;
+  letter-spacing: .05rem;
 }
 
 .link:hover{
-  opacity: .8;
+  color: #fff;
 }
 
 .link:active{

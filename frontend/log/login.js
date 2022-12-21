@@ -57,7 +57,7 @@ function logar() {
   var senha = document.getElementById("password").value;
 
   if (login == "admin@admin.com" && senha == "admin") {
-    location.href = "../home/home.html";
+    location.href = "../main/main.html";
   } else {
     alert("Usuário ou senha inválido");
   }

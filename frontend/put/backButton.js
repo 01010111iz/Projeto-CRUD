@@ -1,3 +1,3 @@
 function backButton(){
-    addEventListener("click", location.href="../home/home.html")
+    addEventListener("click", location.href="../main/main.html")
 }

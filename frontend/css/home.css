@@ -13,29 +13,36 @@ h4{
 
 .button-link{
   display: flex;
-  margin-right: 15px;
+  margin: 5px;
+  border: 1px solid #e9d3a7;
   width: auto;
-  border-radius: 8px;
-  border: none;
-  color: #f4f4f4; 
-  border-color: #9f9f9f;
-  font-size: larger;
-  font-weight: 700;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  height: 20px;
+  letter-spacing: .05rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   cursor: pointer;
 }
 
 #list{
-  background: #e7e1d5;
-  color: #6d7179;
+  background: #e7e1d5c7;
 }
 
 #logout{
-  background: #404348;
+  background: #404348c7;
   color: #efecec;
   margin-right: 30px;
 }
-.button-link:hover{
-  opacity: .7;
+#list:hover{
+  color: #fff;
+}
+
+#logout:hover{
+  color:#f0cb83
 }
 
 .button-link:active{
