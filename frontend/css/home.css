@@ -14,14 +14,13 @@ h4{
 .button-link{
   display: flex;
   margin: 5px;
-  border: 1px solid #e9d3a7;
+  border: none;
   width: auto;
   border-radius: 10px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   height: 20px;
   letter-spacing: .05rem;
-  transition: all .3s;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -29,20 +28,27 @@ h4{
 }
 
 #list{
-  background: #e7e1d5c7;
+  border-radius: 50px;
+  color: #ffffff;
+  background: transparent;
+  height: 30px;
+  width: 140px;
 }
 
 #logout{
-  background: #404348c7;
-  color: #efecec;
+  border-radius: 50px;
+  color: #ffffff;
+  background: transparent;
   margin-right: 30px;
+  height: 30px;
+  width: 60px;
 }
 #list:hover{
-  color: #fff;
+  background: #ffffff39;
 }
 
 #logout:hover{
-  color:#f0cb83
+  background:#ffffff39
 }
 
 .button-link:active{
