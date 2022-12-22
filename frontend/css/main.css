@@ -60,7 +60,7 @@ body{
 .main{
     margin: 50px 100px;
     font-size: 16px;
-    height: 355px;
+    height: 29.5rem;
 }
 
 .ftr{
@@ -69,7 +69,7 @@ body{
 }
 
 .footer{
-    height: 40px;
+    height: 3rem;
     display: flex;
     align-content: center;
     flex-wrap: wrap;
@@ -107,7 +107,7 @@ img{
     color: #fff;
     text-align: center;
     font-size: 30px;
-    font-family: Helvetica;
+    font-family: "Source Code";
     font-weight: 800;
     border: 0 solid;
     box-shadow: inset 0 0 20px #ffffff7e;
