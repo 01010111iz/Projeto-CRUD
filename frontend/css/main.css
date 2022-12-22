@@ -73,18 +73,30 @@ body{
 
 .ftr{
     position: absolute;
+    display: flex;
+    justify-content: end;
     bottom: 0;
     background-color: #e7e1d5;
     height: 100px;
     width: 100%;
 }
 
-.footer{
-    height: 3rem;
+.FooterText{
     display: flex;
-    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 40px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.footer{
+    display: flex;
     flex-wrap: wrap;
+    align-content: center;
     align-items: stretch;
+    justify-content: end;
+    height: 3rem;
     padding: 30px;
 }
 
