@@ -13,25 +13,27 @@
         <button class="listButton" onclick="UserList()">Lista de usuários</button>
         <button class="logoutButton" onclick="logout()">Logout</button>
     </div>
-    <div class="main">
-        <h1 class="wellcome">
-            Bem-Vindo
-        </h1>
-        <p class="text">
-            Este programa permite a criação de novos usuários, tanto como a vizualização,
-            edição e exclusão de dados já cadastrados.
-        </p>
-        <p class="text1">
-            Os dados são armazenados em um banco de dados (bloco de notas) onde é registrado todas
-            as modicações até então realizadas. 
-        </p>
+    <div id="global">
+        <div class="main">
+            <h1 class="wellcome">
+                Bem-Vindo
+            </h1>
+            <p class="text">
+                Este programa permite a criação de novos usuários, tanto como a vizualização,
+                edição e exclusão de dados já cadastrados.
+            </p>
+            <p class="text1">
+                Os dados são armazenados em um banco de dados (bloco de notas) onde é registrado todas
+                as modicações até então realizadas. 
+            </p>
+        </div>
+        <div class="ftr">
+            <footer class="footer">
+                <img src="https://cdn-icons-png.flaticon.com/128/1051/1051326.png" id="github" alt="github image" onclick="GitHub()" _blank>
+                <span id="linkedin" alt="linkedin logo" onclick="LinkedIn()">in</span>
+            </footer>
+        </div>
+        <script src="./main.js"></script>
     </div>
-    <div class="ftr">
-        <footer class="footer">
-            <img src="https://cdn-icons-png.flaticon.com/128/1051/1051326.png" id="github" alt="github image" onclick="GitHub()" _blank>
-            <span id="linkedin" alt="linkedin logo" onclick="LinkedIn()">in</span>
-        </footer>
-    </div>
-    <script src="./main.js"></script>
 </body>
 </html>
