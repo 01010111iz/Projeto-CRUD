@@ -7,5 +7,13 @@ body {
   .main {
     min-height: 100vh;
     height: auto;
-    background: linear-gradient(192deg, #155226, #185c3e, #16463f);
+    background: #ffffffc7;
   }
+
+  .header{
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    background: linear-gradient(192deg, #155226, #185c3e, #16463f);
+    align-items: center;
+}

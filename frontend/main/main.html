@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="/frontend/css/main.css">
 </head>
 <body>
-    <div class="btns">
-        <button class="registerButton" onclick="Records()"> Tela de Cadastro</button>
-        <button class="listButton" onclick="UserList()">Lista de usuários</button>
-        <button class="logoutButton" onclick="logout()">Logout</button>
+    <div class="header">
+        <div class="Tora"><img src="../img/tora logo.png" alt=""></div>
+        <div class="btns">
+            <button class="registerButton" onclick="Records()"> Tela de Cadastro</button>
+            <button class="listButton" onclick="UserList()">Lista de usuários</button>
+            <button class="logoutButton" onclick="logout()">Logout</button>
+        </div>
     </div>
     <div id="global">
         <div class="main">
@@ -27,6 +30,29 @@
                 as modicações até então realizadas. 
             </p>
         </div>
+
+        <div class="icons-body">
+            <div class="cadastro">
+                <a class="TelaDeCadastro" href="/frontend/home/home.html">
+                    <img class="TelaDeCadastro" src="../img/cadastro.png"><br>
+                    <b class="style-cadastro">Tela de cadastro</b>
+                </a>
+            </div>
+
+            <div class="listaUsuarios">
+                <a class="ListaDeUsuario" href="/frontend/put/put.html">
+                    <img class="ListaDeUsuario" src="../img/lista.png"><br>
+                    <b class="style-lista">Lista de usuários</b>
+                </a>
+            </div>
+            <div class="Logout">
+                <a class="Sair" href="/frontend/log/login.html">
+                    <img class="Sair" src="../img/logout.png" alt=""><br>
+                    <b class="style-out">Logout</b>
+                </a>
+            </div>
+        </div>
+
         <div class="ftr">
             <div>
                 <p class="FooterText">Para conhecer mais sobre mim e meus projetos, acesse:</p>

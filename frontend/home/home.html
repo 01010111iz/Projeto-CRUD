@@ -9,52 +9,56 @@
     <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/style.css">
   </head>
-  <body>
-    <div class ="conteiner">
-      <div class="main">
-        <div class="link">
-          <h4><button class="button-link" id="list" onclick="buttonList()">Lista de cadastro</button></h4>
-          <h4><button class="button-link" id="logout" onclick="logoutButton()">Voltar</button></h4>
-        </div>
-        <div class="header">
-          <h1 class="cadastro">Menu de cadastro de usuário</h1>
-        </div>
-        <div class="content">
-          <form class="form" action="home.html">
-            <h2 id="title">Criar cadastro de usuário</h2>
-
-            <label for="name"></label>
-            <input type="name" class="input-name" placeholder="Nome" id="name" required/>
-            <span class="border"></span>
-
-            <label for="RG"></label>
-            <input  type="number" class="input-RG" placeholder="RG" id="RG" required/>
-            <span class="border"></span>
-
-            <input type="number" class="input-CPF" placeholder="CPF" id="CPF" required/>
-            <span class="border"></span>
-
-            <input type="number" class="input-cep" placeholder="CEP" id="cep" required>
-            <span class="border" id="border-cep"></span>
-    
-            <input type="text" class="input-street" placeholder="Logradouro" id="street" disabled required>
-            <span class="border" id="border-street"></span>
-    
-            <input type="number" class="input-number" placeholder="Nº" id="number" required>
-            <span class="border" id="border-number"></span>
-    
-            <input type="text" class="input-district" placeholder="Bairro" id="district" disabled required>
-            <span class="border" id="border-district"></span>
-    
-            <input type="text" class="input-city" placeholder="Cidade" id="city" disabled required>
-            <span class="border" id="border-city"></span>
-                    
-            <button class="button" id="send" onclick="save()">Enviar</button>
-            <button class="button-res" id="reset" type="reset">Limpar</button>
-          </form>
-        </div>
+  <body>    
+    <div class="header">
+      <div class="Tora"><img src="../img/tora logo.png" alt=""></div>
+      <div class="link">
+        <h4><button class="button-link" id="list" onclick="buttonList()">Lista de cadastro</button></h4>
+        <h4><button class="button-link" id="logout" onclick="logoutButton()">Voltar</button></h4>
       </div>
     </div>
+    <div class="main"> 
+      
+
+      <div class="formHeader">
+        <h1 class="cadastro">Menu de cadastro de usuário</h1>
+      </div>
+      <div class="content">
+        <form class="form" action="home.html">
+          <h2 id="title">Criar cadastro de usuário</h2>
+
+          <label for="name"></label>
+          <input type="name" class="input-name" placeholder="Nome" id="name" required/>
+          <span class="border"></span>
+
+          <label for="RG"></label>
+          <input  type="number" class="input-RG" placeholder="RG" id="RG" required/>
+          <span class="border"></span>
+
+          <input type="number" class="input-CPF" placeholder="CPF" id="CPF" required/>
+          <span class="border"></span>
+
+          <input type="number" class="input-cep" placeholder="CEP" id="cep" required>
+          <span class="border" id="border-cep"></span>
+  
+          <input type="text" class="input-street" placeholder="Logradouro" id="street" disabled required>
+          <span class="border" id="border-street"></span>
+  
+          <input type="number" class="input-number" placeholder="Nº" id="number" required>
+          <span class="border" id="border-number"></span>
+  
+          <input type="text" class="input-district" placeholder="Bairro" id="district" disabled required>
+          <span class="border" id="border-district"></span>
+  
+          <input type="text" class="input-city" placeholder="Cidade" id="city" disabled required>
+          <span class="border" id="border-city"></span>
+                  
+          <button class="button" id="send" onclick="save()">Enviar</button>
+          <button class="button-res" id="reset" type="reset">Limpar</button>
+        </form>
+      </div>
+    </div>
+
   </body>
   <script type="text/javascript" src="./FileSaver.js"></script>
   <script type="text/javascript" src="./index.js"></script>

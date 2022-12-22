@@ -10,10 +10,10 @@ body{
     min-height: 90vh;
 }
 
-.btns{
+.header{
     display: flex;
     height: 50px;
-    justify-content: end;
+    justify-content: space-between;
     background: linear-gradient(192deg, #155226, #185c3e, #16463f);
     align-items: center;
 }
@@ -36,7 +36,7 @@ body{
 
 .logoutButton{
     cursor: pointer;
-    margin: 5px;
+    margin: 5px 10px;
     border: none;
     border-radius: 10px;
     background: transparent;
@@ -68,7 +68,66 @@ body{
     padding-bottom: 2.5rem;
     margin: 50px 100px;
     font-size: 16px;
-    height: 29.5rem;
+    height: 15rem;
+}
+
+.icons-body{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+    margin-right: 4rem;
+}
+
+.cadastro{
+    transition: all .5s ease-in-out 0s;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    text-align: center;
+}
+
+.TelaDeCadastro{
+    text-decoration: none;
+}
+
+.style-cadastro{
+    color: #185c3e;
+}
+
+.listaUsuarios{
+    transition: all .8s ease-in-out 0s;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    text-align: center;
+}
+
+.ListaDeUsuario{
+    text-decoration: none;
+}
+
+.style-lista{
+    color: #185c3e;
+}
+
+.Logout{
+    transition: all .8s ease-in-out 0s;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    text-align: center;
+}
+
+.Sair{
+    text-decoration: none;
+}
+
+.style-out{
+    color: #185c3e;
+}
+
+.cadastro:hover, .listaUsuarios:hover, .Logout:hover{
+    transform: translateY(-6px);
 }
 
 .ftr{
