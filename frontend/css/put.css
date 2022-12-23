@@ -63,6 +63,11 @@
   transition: all 1s;
 }
 
+#editButton:hover, #editButton:focus{
+  position: relative;
+  animation: spin 2s linear;
+}
+
 #deleteButton:hover, #deleteButton:focus{
   position: relative;
   animation: spin 4s linear infinite;
