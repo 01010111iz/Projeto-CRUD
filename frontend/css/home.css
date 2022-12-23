@@ -1,42 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 h4{
-  margin:10}
-
-.Tora{
-  height: 3px;
-}
-
-.link{
-  background: transparent;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  justify-content: end;
+  margin:10;
 }
 
 .button-link{
-  display: flex;
+  cursor: pointer;
   margin: 5px;
   border: none;
-  width: auto;
   border-radius: 10px;
-  font-size: 12px;
+  background: transparent;
+  color: #ffffff;
   font-weight: bold;
-  height: 20px;
+  font-size: 10px;
+  height: 30px;
+  width: auto;
   letter-spacing: .05rem;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  cursor: pointer;
-}
-
-#list{
-  border-radius: 50px;
-  color: #ffffff;
-  background: transparent;
-  height: 30px;
-  width: 140px;
 }
 
 #logout{
@@ -59,7 +39,6 @@ h4{
   opacity: .4;
 }
 
-
 .formHeader {
   min-height: 60px;
   width: auto;
@@ -71,23 +50,20 @@ h4{
 }
 
 .cadastro {
-  margin-top: 10px;
+  margin: 24px;
   font-family: "Montserrat";
   font-weight: 900;
-  background: linear-gradient(180deg, #f9f9f9, #cfcfcf);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #0c0c0cc9;
 }
 
 .content {
   margin: auto;
   min-height: 400px;
   width: 360px;
-  background-color: #e7e1d5;
+  background-color: #d5e7d6;
   box-sizing: border-box;
   padding: 32px;
   border-radius: 8px;
@@ -118,20 +94,19 @@ input {
   padding-left: 8px;
   outline: unset;
   border-radius: 4px;
-  background: #e7e1d5;
-  color: #6d7179;
+  background: #d5e7d6;
 }
 
 :disabled{
-  color: #e7e1d5;
-  background-color: #6d7179;
+  color: #0c0c0c;
+  background-color: #6d796d;
 }
 
 .border {
   height: 1px;
   width: 100%;
   margin-bottom: 8px;
-  background-color: #cfcfcf;
+  background-color: #c4c3c3;
 }
 
 .border-address {
@@ -148,6 +123,7 @@ button {
   align-items: center;
   justify-content: center;
 }
+
 .button {
   outline: none;
   background: #174950;
@@ -169,10 +145,9 @@ button {
   opacity: .8;
 }
 
-
 .button-res {
   outline: none;
-  background: #cfcfcf;
+  background: #c0c0c0;
   font-weight: bold;
   font-size: 13px;
   border-radius: 6px;

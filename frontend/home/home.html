@@ -12,14 +12,13 @@
   <body>    
     <div class="header">
       <div class="Tora"><img src="../img/tora logo.png" alt=""></div>
-      <div class="link">
-        <h4><button class="button-link" id="list" onclick="buttonList()">Lista de cadastro</button></h4>
-        <h4><button class="button-link" id="logout" onclick="logoutButton()">Voltar</button></h4>
+      <div class="btns">
+        <button class="registerButton" onclick="Records()"> Tela de Cadastro</button>
+        <button class="listButton" onclick="UserList()">Lista de usuários</button>
+        <button class="button-link" id="logout" onclick="logoutButton()">Voltar</button>
       </div>
     </div>
     <div class="main"> 
-      
-
       <div class="formHeader">
         <h1 class="cadastro">Menu de cadastro de usuário</h1>
       </div>
@@ -63,5 +62,6 @@
   <script type="text/javascript" src="./FileSaver.js"></script>
   <script type="text/javascript" src="./index.js"></script>
   <script src="./logoutButton.js"></script>
+  <script src="../main/main.js"></script>
   <script src="./zip code/zipCode.js"></script>
 </html>

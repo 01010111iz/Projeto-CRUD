@@ -7,29 +7,41 @@
     <title>Atualização de cadastro</title>
     <link rel="stylesheet" href="./modal/modal.css">
     <link rel="stylesheet" href="/frontend/css/put.css" />
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body onload="userData()">
+    <div class="header">
+      <div class="Tora"><img src="../img/tora logo.png" alt=""></div>
+      <div class="btns">
+        <button class="registerButton" onclick="Records()"> Tela de Cadastro</button>
+        <button class="listButton" onclick="UserList()">Lista de usuários</button>
+        <button class="back" onclick="backButton()">Voltar</button>
+      </div>
+    </div>
+  
+    <div class="main">
+      <div class="table">
+        <div class="TableHead">
+          <h1 class="TableTitle">Lista de Cadastro</h1>
+        </div>
+        
+        <table class="TableContent">
+          <tbody class="tbody">
+            <tr class="dataUser"></tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- 
+    -->
+    </div> 
     <script src="./put.js"></script>
     <script src="./backButton.js"></script>
     <script src="../delete/delete.js"></script>
     <script src="./modal/modal.js"></script>
-  </head>
-  <body onload="userData()">
-    <div class="div-link">
-      <h4><button class="link" onclick="backButton()">Voltar</button></h4>
-    </div>
-    <div id="table">
-      <table id="head">
-        <h1>Lista de Cadastro</h1>
-      </table>
-   
-      <table id="data-head">
-        <tbody id="tbody">
-          <tr id="dataUser"></tr>
-        </tbody>
-      </table>
-    </div>
+    <script src="../main/main.js"></script>
   </body>
 
-   <body>
+  <body>
     <div id="myModal" class="modal">
       <form class="form" action="put.html">
         <h2 id="titleModal">Editar cadastro de usuário</h2>
@@ -64,5 +76,6 @@
         </div>
       </form>
     </div>
-  </body> 
+  </body>
+  
 </html>

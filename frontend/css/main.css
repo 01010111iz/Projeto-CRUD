@@ -27,7 +27,7 @@ body{
     color: #ffffff;
     font-weight: bold;
     font-size: 10px;
-    height: 20px;
+    height: 30px;
     letter-spacing: .05rem;
     position: relative;
     overflow: hidden;
@@ -43,7 +43,7 @@ body{
     color: #ffffff;
     font-weight: bold;
     font-size: 10px;
-    height: 20px;
+    height: 30px;
     letter-spacing: .05rem;
     position: relative;
     overflow: hidden;
@@ -63,6 +63,10 @@ body{
     height: 30px;
     width: auto;
 }
+
+.registerButton:active, .listButton:active{
+    opacity: .4;
+  }
 
 .main{
     padding-bottom: 2.5rem;

@@ -22,13 +22,16 @@ function userData() {
                       <span id="${info}_${json[id]["id"]}">${json[id][info]}</span>
                     </ul>`;
         }
-        li_html += `<img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" 
+        li_html += `<div class="Buttons">
+      <img src="../img/edit button.png"
+      id="editButton"   
       class="editButton_${json[id]["id"]}" 
       onclick=Modal("${json[id]["id"]}")></img>
 
-      <img src="https://cdn-icons-png.flaticon.com/512/3138/3138336.png" 
+      <img src="../img/delete button.png" 
+      id="deleteButton"
       class="deleteButton_${json[id]["id"]}" 
-      onclick=Confirm("${json[id]["id"]}")></img>`;
+      onclick=Confirm("${json[id]["id"]}")></img></div>`;
 
         ul_html += li_html;
       }
