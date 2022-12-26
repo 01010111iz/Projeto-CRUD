@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", sans-serif, "Segoe UI", Tahoma, Geneva, Verdana;
+    font-family: Tahoma, sans-serif, "Segoe UI", Tahoma, Geneva, Verdana;
   }
 
   body::-webkit-scrollbar{

@@ -1,5 +1,5 @@
 "use strict";
-function CleanForm(address){
+function CleanForm(){
     document.getElementById("street").value = "";
     document.getElementById("district").value = "";
     document.getElementById("city").value = "";
