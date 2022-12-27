@@ -1,12 +1,12 @@
-body{
+body {
   overflow: hidden;
 }
 
-h4{
-  margin:10;
+h4 {
+  margin: 10;
 }
 
-.button-link{
+.button-link {
   cursor: pointer;
   margin: 5px;
   border: none;
@@ -17,13 +17,13 @@ h4{
   font-size: 10px;
   height: 30px;
   width: auto;
-  letter-spacing: .05rem;
+  letter-spacing: 0.05rem;
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
 
-#logout{
+#logout {
   border-radius: 50px;
   color: #ffffff;
   background: transparent;
@@ -31,16 +31,16 @@ h4{
   height: 30px;
   width: 60px;
 }
-#list:hover{
+#list:hover {
   background: #ffffff39;
 }
 
-#logout:hover{
-  background:#ffffff39
+#logout:hover {
+  background: #ffffff39;
 }
 
-.button-link:active{
-  opacity: .4;
+.button-link:active {
+  opacity: 0.4;
 }
 
 .formHeader {
@@ -83,7 +83,7 @@ form {
   justify-content: center;
 }
 
-h2{
+h2 {
   color: #6d7179;
   display: flex;
   justify-content: center;
@@ -101,7 +101,7 @@ input {
   background: #d5e7d6;
 }
 
-:disabled{
+:disabled {
   color: #0c0c0c;
   background-color: #b5b5b5;
 }
@@ -141,12 +141,12 @@ button {
   transition: 1s;
 }
 
-.button:hover{
+.button:hover {
   background: #0b8000;
 }
 
-.button:active{
-  opacity: .8;
+.button:active {
+  opacity: 0.8;
 }
 
 .button-res {
@@ -161,10 +161,10 @@ button {
   transition: 1s;
 }
 
-.button-res:hover{
+.button-res:hover {
   background: #f73636;
 }
 
-.button-res:active{
-  opacity: .8;
+.button-res:active {
+  opacity: 0.8;
 }

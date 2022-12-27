@@ -1,71 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Tahoma, sans-serif, "Segoe UI", Tahoma, Geneva, Verdana;
-  }
-
-  body::-webkit-scrollbar{
-    width: 10px;
-  }
-  
-  body::-webkit-scrollbar-track{
-    background-color: #66666666;
-  }
-
-  body::-webkit-scrollbar-thumb{
-    background: #272727a8;
-    border-radius: 15px;
-  }
-
-  .main {
-    min-height: 92vh;
-    height: auto;
-    background: #ffffffc7;
-  }
-
-  .header{
-    display: flex;
-    height: 50px;
-    justify-content: space-between;
-    background: linear-gradient(192deg, #155226, #185c3e, #16463f);
-    align-items: center;
-    
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, sans-serif, "Segoe UI", Tahoma, Geneva, Verdana;
 }
 
-img{
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #66666666;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #272727a8;
+  border-radius: 15px;
+}
+
+.main {
+  min-height: 92vh;
+  height: auto;
+  background: #ffffffc7;
+}
+
+.header {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  background: linear-gradient(192deg, #155226, #185c3e, #16463f);
+  align-items: center;
+}
+
+img {
   height: 40px;
   margin: 5px 15px;
 }
 
-.btns{
+.btns {
   display: flex;
 }
 
-.registerButton, .listButton {
-    cursor: pointer;
-    margin: 5px;
-    border: none;
-    border-radius: 10px;
-    background: transparent;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 10px;
-    height: 30px;
-    width: auto;
-    letter-spacing: .05rem;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
+.registerButton,
+.listButton {
+  cursor: pointer;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 10px;
+  height: 30px;
+  width: auto;
+  letter-spacing: 0.05rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.registerButton:hover, .listButton:hover{
-    border-radius: 50px;    
-    background: #ffffff39;
-    height: 30px;
-    width: auto;
+.registerButton:hover,
+.listButton:hover {
+  border-radius: 50px;
+  background: #ffffff39;
+  height: 30px;
+  width: auto;
 }
 
-.registerButton:active, .listButton:active{
-  opacity: .4;
+.registerButton:active,
+.listButton:active {
+  opacity: 0.4;
 }

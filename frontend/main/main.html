@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu Principal</title>
-    <link rel="stylesheet" href="/frontend/css/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/frontend/css/main.css" />
+  </head>
+  <body>
     <div class="header">
-        <div class="Tora"><img src="../img/tora logo.png" alt=""></div>
-        <div class="btns">
-            <button class="registerButton" onclick="Records()"> Tela de Cadastro</button>
-            <button class="listButton" onclick="UserList()">Lista de usuários</button>
-            <button class="logoutButton" onclick="logout()">Logout</button>
-        </div>
+      <div class="Tora"><img src="../img/tora logo.png" alt="" /></div>
+      <div class="btns">
+        <button class="registerButton" onclick="Records()">
+          Tela de Cadastro
+        </button>
+        <button class="listButton" onclick="UserList()">
+          Lista de usuários
+        </button>
+        <button class="logoutButton" onclick="logout()">Logout</button>
+      </div>
     </div>
     <div id="global">
-        <div class="main">
-            <h1 class="wellcome">
-                Bem-Vindo
-            </h1>
-            <p class="text">
-                Este programa permite a criação de novos usuários, tanto como a visualização,
-                edição e exclusão de dados já cadastrados.
-            </p>
-            <p class="text1">
-                Os dados são armazenados em um banco de dados (bloco de notas) onde são registradas todas
-                as modificações até então realizadas. 
-            </p>
+      <div class="main">
+        <h1 class="wellcome">Bem-Vindo</h1>
+        <p class="text">
+          Este programa permite a criação de novos usuários, tanto como a
+          visualização, edição e exclusão de dados já cadastrados.
+        </p>
+        <p class="text1">
+          Os dados são armazenados em um banco de dados (bloco de notas) onde
+          são registradas todas as modificações até então realizadas.
+        </p>
+      </div>
+
+      <div class="icons-body">
+        <div class="cadastro">
+          <a class="TelaDeCadastro" href="/frontend/home/home.html">
+            <img class="TelaDeCadastro" src="../img/cadastro.png" /><br />
+            <b class="style-cadastro">Tela de cadastro</b>
+          </a>
         </div>
 
-        <div class="icons-body">
-            <div class="cadastro">
-                <a class="TelaDeCadastro" href="/frontend/home/home.html">
-                    <img class="TelaDeCadastro" src="../img/cadastro.png"><br>
-                    <b class="style-cadastro">Tela de cadastro</b>
-                </a>
-            </div>
-
-            <div class="listaUsuarios">
-                <a class="ListaDeUsuario" href="/frontend/put/put.html">
-                    <img class="ListaDeUsuario" src="../img/lista.png"><br>
-                    <b class="style-lista">Lista de usuários</b>
-                </a>
-            </div>
-            <div class="Logout">
-                <a class="Sair" href="/frontend/log/login.html">
-                    <img class="Sair" src="../img/logout.png" alt=""><br>
-                    <b class="style-out">Logout</b>
-                </a>
-            </div>
+        <div class="listaUsuarios">
+          <a class="ListaDeUsuario" href="/frontend/put/put.html">
+            <img class="ListaDeUsuario" src="../img/lista.png" /><br />
+            <b class="style-lista">Lista de usuários</b>
+          </a>
         </div>
-
-        <div class="ftr">
-            <div>
-                <p class="FooterText">Para conhecer mais sobre mim e meus projetos, acesse:</p>
-            </div>
-            <footer class="footer">
-                <img src="https://cdn-icons-png.flaticon.com/128/1051/1051326.png" id="github" alt="github image" onclick="GitHub()" _blank>
-                <span id="linkedin" alt="linkedin logo" onclick="LinkedIn()">in</span>
-            </footer>
+        <div class="Logout">
+          <a class="Sair" href="/frontend/log/login.html">
+            <img class="Sair" src="../img/logout.png" alt="" /><br />
+            <b class="style-out">Logout</b>
+          </a>
         </div>
-        <script src="./main.js"></script>
+      </div>
+
+      <div class="ftr">
+        <div>
+          <p class="FooterText">
+            Para conhecer mais sobre mim e meus projetos, acesse:
+          </p>
+        </div>
+        <footer class="footer">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1051/1051326.png"
+            id="github"
+            alt="github image"
+            onclick="GitHub()"
+            _blank
+          />
+          <span id="linkedin" alt="linkedin logo" onclick="LinkedIn()">in</span>
+        </footer>
+      </div>
+      <script src="./main.js"></script>
     </div>
-</body>
+  </body>
 </html>

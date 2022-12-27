@@ -1,3 +1,3 @@
-function logoutButton(){
-    addEventListener("click", location.href = "../main/main.html");
+function logoutButton() {
+  addEventListener("click", (location.href = "../main/main.html"));
 }

@@ -47,13 +47,22 @@ function editData(id) {
   let rg = document.getElementById("RGModal").value;
   let cpf = document.getElementById("CPFModal").value;
   let cep = document.getElementById("cepModal").value;
-  let street = document.getElementById("streetModal").value
-  let number = document.getElementById("numberModal").value
-  let district = document.getElementById("districtModal").value
-  let city = document.getElementById("cityModal").value
+  let street = document.getElementById("streetModal").value;
+  let number = document.getElementById("numberModal").value;
+  let district = document.getElementById("districtModal").value;
+  let city = document.getElementById("cityModal").value;
   fetch(URLedit + id, {
     method: "PUT",
-    body: JSON.stringify({ name, rg, cpf, cep, street, number, district, city }),
+    body: JSON.stringify({
+      name,
+      rg,
+      cpf,
+      cep,
+      street,
+      number,
+      district,
+      city,
+    }),
     headers: {
       "Content-Type": "application/json",
     },

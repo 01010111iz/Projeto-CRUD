@@ -1,4 +1,4 @@
-.back{
+.back {
   cursor: pointer;
   margin: 5px;
   margin-right: 30px;
@@ -10,71 +10,80 @@
   font-size: 10px;
   height: 30px;
   width: auto;
-  letter-spacing: .05rem;
+  letter-spacing: 0.05rem;
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
 
-.back:hover{
-  border-radius: 50px;    
+.back:hover {
+  border-radius: 50px;
   background: #ffffff39;
   height: 30px;
   width: auto;
 }
 
-.back:active{
-  opacity: .4;
+.back:active {
+  opacity: 0.4;
 }
 
-.table{
+.table {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.TableTitle{
+.TableTitle {
   font-size: 40px;
   font-weight: 600;
-  letter-spacing: .05rem;
+  letter-spacing: 0.05rem;
   color: #0c0c0cc9;
 }
 
-.TableContent{
+.TableContent {
   width: 500px;
   height: auto;
   background: #d5e7d6;
   border-radius: 10px;
   text-transform: capitalize;
   font-size: 15px;
-  letter-spacing: .04rem;
+  letter-spacing: 0.04rem;
 }
 
-.Buttons{
+.Buttons {
   display: flex;
   justify-content: space-evenly;
 }
 
-#editButton, #deleteButton{
+#editButton,
+#deleteButton {
   cursor: pointer;
   height: 28px;
   width: auto;
   transition: all 1s;
 }
 
-#editButton:hover, #editButton:focus{
+#editButton:hover,
+#editButton:focus {
   position: relative;
   animation: spin 2s linear;
 }
 
-#deleteButton:hover, #deleteButton:focus{
+#deleteButton:hover,
+#deleteButton:focus {
   position: relative;
   animation: spin 4s linear infinite;
 }
 
-#editButton:active, #deleteButton:active{
-  opacity: .3;
+#editButton:active,
+#deleteButton:active {
+  opacity: 0.3;
 }
 
-@keyframes spin {100%{-webkit-transform: rotateX(360deg); transform: rotate(360deg);}}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotateX(360deg);
+    transform: rotate(360deg);
+  }
+}

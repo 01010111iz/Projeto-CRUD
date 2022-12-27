@@ -14,27 +14,35 @@ function save() {
     type: "text/plain;charset=utf-8",
   });
   blob, "Formulário de cadastro " + ".txt";
-  if(!name, !rg, !cpf, !cep, !street, !number, !district, !city){
-    alert("Dados obrigatórios!")
+  if ((!name, !rg, !cpf, !cep, !street, !number, !district, !city)) {
+    alert("Dados obrigatórios!");
     return true;
-  }else{
-  fetch(URL, {
-    method: "POST",
-    body: JSON.stringify({ name, rg, cpf, cep, street, number, district, city }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => response.json())
-    .then(alert("Dados inseridos!"))
-    .catch((error) => {
-      console.log(error);
-      alert("Erro ao registrar usuário!");
-    });
+  } else {
+    fetch(URL, {
+      method: "POST",
+      body: JSON.stringify({
+        name,
+        rg,
+        cpf,
+        cep,
+        street,
+        number,
+        district,
+        city,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then(alert("Dados inseridos!"))
+      .catch((error) => {
+        console.log(error);
+        alert("Erro ao registrar usuário!");
+      });
   }
 }
 
-function buttonList(){
-  addEventListener("click", 
-  location.href="/frontend/put/put.html")
+function buttonList() {
+  addEventListener("click", (location.href = "/frontend/put/put.html"));
 }

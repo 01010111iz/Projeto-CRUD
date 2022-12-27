@@ -17,7 +17,9 @@ function isEmailValid() {
 function toggleEmailErrors() {
   const email = form.email().value;
   form.emailRequiredError().style.display = email ? "none" : "block";
-  form.emailInvalidError().style.display = validateEmail(email)? "none" : "block";
+  form.emailInvalidError().style.display = validateEmail(email)
+    ? "none"
+    : "block";
 }
 
 //função para desabilitar os botões
