@@ -103,7 +103,7 @@ input {
 
 :disabled{
   color: #0c0c0c;
-  background-color: #6d796d;
+  background-color: #b5b5b5;
 }
 
 .border {
@@ -130,7 +130,7 @@ button {
 
 .button {
   outline: none;
-  background: #174950;
+  background: #17501e;
   color: #ffffff;
   font-weight: bold;
   font-size: 13px;
@@ -142,7 +142,7 @@ button {
 }
 
 .button:hover{
-  background: #008080;
+  background: #0b8000;
 }
 
 .button:active{

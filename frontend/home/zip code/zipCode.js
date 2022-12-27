@@ -24,6 +24,8 @@ const searchZipCode = async () => {
         }else{
             FillOutForm(address);
         }
+    }else if(cep == ""){
+        alert("Campo obrigatório!")
     }else{
         alert("CEP incorreto");
     }
